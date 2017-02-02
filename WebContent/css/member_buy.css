@@ -1,0 +1,166 @@
+/*全体ラッパー*/
+.member_buy_wrapper{
+	width: 100vw;
+	min-width: 1080px;
+	height: 80vh;
+	min-height: 560px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	background-color: #eee;
+}
+.member_buy_title{
+	width: 96vw;
+	min-width: 1000px;
+	height: 5vh;
+	min-height: 30px;
+	padding: 10px 0 10px 61px;
+	font-size: 32px;
+	border-bottom: dashed 2px; width:96vw;
+	background-color: #eee;
+}
+.new_add_wrapper{
+	width: 100vw;
+	min-width: 1080px;
+	height: 7vh;
+	min-height: 50px;
+	background-color: #eee;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.max_add{
+	width: 30vw;
+	min-width: 300px;
+	height: 5vh;
+	min-height: 30px;
+	font-size: 22px;
+	margin: 10px 0 10px 80px;
+}
+.new_shipping{
+	width: 150px;
+	height: 30px;
+	margin: 10px 80px 10px 0;
+	line-height: 28px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ccc;
+	background-color: #db0000;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.member_shipping{
+	width: 900px;
+	min-width: 900px;
+	height: 322px;
+	min-height: 322px;
+	margin: 20px auto;
+	border: solid 1px;
+	background-color: #f0f;
+	flex-flow: column nowrap;
+	}
+.shipping_button_wrapper{
+	width: 900px;
+	height: 0;
+	display: flex;
+	flex-flow: row-reverse nowrap;
+}
+.member_shipping_wrapper{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+}
+.member_shipping_right{
+	width: 151px;
+	min-width: 151px;
+	height: 242px;
+	min-height: 242px;
+	border: solid 1px;
+	background-color: #fff;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+.member_shipping_right button{
+	width: 60px;
+	height: 35px;
+	margin: 10px auto;
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ccc;
+	background-color: #db0000;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.member_shipping_top{
+	width: 747px;
+	min-width: 747px;
+	height: 100px;
+	min-height: 100px;
+	border: solid 1px;
+	background-color: #fff;
+	font-size: 21px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.member_shipping_top p{
+	margin: 10px 0 10px;
+	padding: 10px 0;
+}
+.member_shipping_middle{
+	width: 747px;
+	min-width: 747px;
+	height: 140px;
+	min-height: 140px;
+	border: solid 1px;
+	background-color: #fff;
+	font-size: 21px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.member_shipping_middle p{
+	margin: 30px 0 10px;
+	padding: 10px 0;
+}
+.member_shipping_button{
+	width: 898px;
+	min-width: 898px;
+	height: 76px;
+	min-height: 76px;
+	border: solid 1px;
+	background-color: #fff;
+	font-size: 21px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+.member_shipping_button button{
+	width: 160px;
+	height: 35px;
+	margin: 10px auto;
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ccc;
+	background-color: #db0000;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/* フォームスタイルのリセット */
+input,button,textarea,select{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance:none;
+}

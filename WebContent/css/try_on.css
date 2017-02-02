@@ -1,0 +1,261 @@
+
+/*wrapper*/
+.try_on_wrapper{
+	display: flex;
+	width: 100vw;
+	max-width: ;
+	min-width: 1080px;
+	height: auto;
+	max-height: 100vh;
+	min-height: 950px;
+	margin: 0 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	background-color: #d3d3d3;
+}
+
+
+/*左カラム*/
+.left_column_wrapper{
+	order: 1;
+	width: 60vw;
+	max-width: ;
+	min-width: 600px;
+	height: auto;
+	min-height: 650px;
+	background-color: #d3d3d3;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+.try_on_content{
+	width: 50vw;
+	max-width: 800px;
+	min-width: 450px;
+	height: 605px;
+	min-height: 562px;
+	margin-top: 45px;
+	background: #f3f;
+	border: solid 1px;
+	/*margin: 0 0 40px 0;*/
+}
+.try_on_content h2{
+	text-align: center;
+	margin-top: 270px;
+	font-size: 32px;
+}
+
+/*右カラム*/
+.right_column_wrapper{
+	order: 2;
+	width: 40vw;
+	max-width: 50vw;
+	min-width: 480px;
+	height: auto;
+	min-height: 600px;
+	background-color: #d3d3d3;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+.tab_wrapper{
+	min-width: 280px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+.tab_wrapper li{
+	width: auto;
+	max-width: 65px;
+	min-width: 60px;
+	height: 40px;
+	margin: 45px 0 0 0;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	color : #fff;
+	border: solid 1px #000;
+}
+.tab1{
+	background-color: #22f;
+}
+.tab1:hover{
+	background-color: #66f;
+	cursor: pointer;
+}
+.tab2{
+	background-color: #f22;
+}
+.tab2:hover{
+	background-color: #f66;
+	cursor: pointer;
+}
+.tab3{
+	background-color: #2f2;
+}
+.tab3:hover{
+	background-color: #6f6;
+	cursor: pointer;
+}
+.tab4{
+	background-color: #f80;
+}
+.tab4:hover{
+	background-color: #fa2;
+	cursor: pointer;
+}
+
+
+.tab_content{
+	width: 280px;
+	max-width: 280px;
+	min-width: 280px;
+	height:auto;
+	padding : 20px;
+	border : solid 5px;
+	clear : both;
+	color : #000;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+}
+.color_module_wrapper{
+	width: 280px;
+	height: 260px;
+	padding: 8px;
+	border: solid 1px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.color_module_wrapper p:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+.cherry_pink{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #D35889;
+}
+.sunny_orange{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #FFD500;
+}
+.shadow_orange{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #EDA500;
+}
+.rose_wine{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #a9526f;
+}
+.camel_black{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #765032;
+}
+.leaf_green{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #89b356;
+}
+.cocoa_brown{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #764e40;
+}
+.mirror{
+	width: 80px;
+	height: 80px;
+	border: solid 1px;
+	border-radius: 50%;
+	background-color: #C0C0C0;
+}
+.colorless{
+	width: 80px;
+	height: 80px;
+	border: solid 1px;
+	border-radius: 50%;
+	background-color: #ececff;
+}
+.lens_module_wrapper{
+	width: 280px;
+	height: 200px;
+	padding: 8px;
+	border: solid 1px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.lens_module_wrapper p:hover{
+	opacity: 0.7;
+}
+.lens_module{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	border: solid 1px;
+	background-color: #ddd;
+}
+.lens_module:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+/*戻るボタン*/
+.return_btn_wrapper{
+	order: 4;
+	width: 100vw;
+	min-width: 1080px;
+	height:auto;
+	min-height: 220px;
+	background-color: #d3d3d3:
+}
+.return_btn{
+	width: 100vw;
+	height:auto;
+	min-height: 220px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.return_btn img{
+	width: 150px;
+	height: 150px;
+}
+.return_btn img:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+/* フォームスタイルのリセット */
+input,button,textarea,select{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance:none;
+}

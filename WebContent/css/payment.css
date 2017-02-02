@@ -1,0 +1,249 @@
+/*全体*/
+.overall_wrapper{
+	display: flex;
+	width: 60vw;
+	height: 62vh;
+	max-height: 100vh;
+	min-height: 500px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: ;
+	justify-content: center;
+}
+
+/*メイン*/
+.payment_wrapper{
+	width: 60vw;
+	min-width: 870px;
+	height: 62vh;
+	max-height: 100vh;
+	min-height: 680px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-content: flex-start;
+	background-color: #fff;
+}
+.payment_title{
+	width: 300px;
+	height: 40px;
+	margin: 0 auto;
+	padding:  10px 0 0 0;
+	font-size: 28px;
+	text-align: center;
+	background-color: #fff;
+}
+.payment_credit{
+	width:40vw;
+	min-width: 580px;
+	height: 45vh;
+	min-height: 320px;
+	margin: 5px auto;
+	border: solid 1px;
+	background-color: #fff;
+	display: flex;
+	flex-flow: column nowrap;
+}
+.payment_credit_label{
+	width: 40vw;
+	min-width: 580px;
+	height: 4vh;
+	min-height: 23px;
+	padding: 3px 0 0 0;
+	border-bottom: solid 1px;
+	font-size: 19px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}
+.credit_form{
+	width: 40vw;
+	min-width: 580px;
+	height: 12vh;
+	min-height: 101px;
+	background-color: #fff;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.credit_form p{
+	width: 90px;
+	height: 20px;
+	margin: 10px 0 0 0;
+}
+.credit_form label{
+	width: 170px;
+	height: 20px;
+	margin: 10px 0 0 40px;
+}
+.add_credit_wrapper{
+	width: 40vw;
+	min-width: 580px;
+	height: 5vh;
+	min-height: 51px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content:flex-start;
+}
+.add_credit_wrapper button{
+	width: 160px;
+	height: 30px;
+	margin: 10px 10px 10px 0;
+	line-height: 28px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ccc;
+	background-color: #d40000;
+	border-radius: 10px;
+}
+.add_credit_wrapper button:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+.select_credit_btn_wrapper{
+	width: 40vw;
+	min-width: 580px;
+	height: 7vh;
+	min-height: 141px;
+	margin: 0 auto;
+	background-color: #fff;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.credit_description{
+	width:230px;
+	height: 70px;
+	margin: 20px 30px 0 0;
+	font-size: 18px;
+}
+.select_credit_btn{
+	display: block;
+	border: 0px;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;/*センターに表示*/
+	cursor: pointer;/*カーソルの変更*/
+	background: url(../100/creditCard.png) left top no-repeat;
+}
+.select_credit_btn:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+.credit_possible{
+	width:45vw;
+	min-width: 620px;
+	height: 15vh;
+	min-height: 120px;
+	margin: 5px auto;
+	border-top: dashed 2px;
+	border-bottom: dashed 2px;
+	background-color: #fff;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+.credit_possible h2{
+	width: 45vw;
+	min-width: 620px;
+	margin: 5px 0;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+.credit_possible img{
+	width: 80px;
+	height: 40px;
+	margin-right: 10px;
+}
+.payment_cash{
+	width:40vw;
+	min-width: 580px;
+	height: 15vh;
+	min-height: 120px;
+	margin: 5px auto;
+	border: solid 1px;
+	background-color: #fff;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+.select_cash_btn_wrapper{
+	width: 40vw;
+	min-width: 580px;
+	height: 7vh;
+	min-height: 120px;
+	margin: 0 auto;
+	background-color: #fff;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.select_cash_btn{
+	display: block;
+	border: 0px;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;/*センターに表示*/
+	background: url(../100/daibiki.png) left top no-repeat;
+}
+.select_cash_btn:hover{
+	cursor: pointer;
+	opacity: 0.7;
+}
+.cash_description{
+	width:240px;
+	height: 70px;
+	margin: 20px 30px 0 0;
+	font-size: 18px;
+}
+
+/* フォームスタイルのリセット */
+input,button,textarea,select{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance:none;
+}
+
+input[type="radio"] {
+	display: none;/*レイアウトを揃える*/
+}
+input[type="radio"] + label {/*関連付けられたテキスト部分をクリックしてもチェックを付けることができる*/
+	position: relative;/*ポジションの設定*/
+	display: inline-block;
+	padding: 3px 3px 3px 20px;
+	cursor: pointer;
+}
+input[type="radio"] + label::before {
+	position: absolute;/*ポジションの設定*/
+	content: '';/*要素にコンテンツを挿入する際に使用*/
+	top: 50%;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	margin-top: -8px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 100%;/*ラジオボタンを丸くする*/
+}
+input[type="radio"]:checked + label::after {
+	position: absolute;/*ポジションの設定*/
+	content: '';/*要素にコンテンツを挿入する際に使用*/
+	top: 50%;
+	left: 4px;
+	width: 8px;
+	height: 8px;
+	margin-top: -4px;
+	background: #007bbb;
+	border-radius: 100%;/*ラジオボタンを丸くする*/
+}

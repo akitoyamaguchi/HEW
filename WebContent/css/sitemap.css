@@ -1,0 +1,47 @@
+.sitemap_wrapper{
+  width: 880px;
+  margin: 16px auto;
+}
+
+.sitemap_wrapper h2{
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.sitemap_content{
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  border: solid 1px #000;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.list_box{
+  width: 400px;
+}
+
+dt, dd{
+  display: block;
+}
+
+dl{
+  width: 300px;
+  height: auto;
+  margin: 0 auto 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+
+dt{
+  margin-bottom: 8px;
+}
+
+h3{
+  margin: 8px 0 0 16px;
+}
+
+a{
+  text-decoration: none;
+}
