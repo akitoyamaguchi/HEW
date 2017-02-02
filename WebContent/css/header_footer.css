@@ -1,0 +1,193 @@
+/*全体ラッパー*/
+.wrapper{
+	width: 100vw;
+	max-width: 100%;
+	min-width: 1080px;
+	height: 100vh;
+	max-height: auto;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	background-color: ;
+}
+
+
+/* ヘッダー部分・ロゴ・サイトタイトル */
+header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100vw;
+	min-width: 1080px;
+	height: 15vh;
+	min-height: 120px;
+	margin: 0 auto;
+	padding: 20px 0;
+	background-color: #525c6e;
+}
+.header_logo {
+	width: 25vw;
+	max-width: 100%;
+	min-width: 200px;
+	height: 15vh;
+	min-height: 120px;
+	font-size: 32px;
+	background-color: ;
+}
+.header_logo img{
+	width: 300px;
+	max-width: 100%;
+	min-width: 100%;
+	height: 5vw;
+	min-height: 120px;
+
+}
+.header_logo img:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+/* ヘッダーナビゲーション */
+.header_nav_wrapper{
+		width: 75vw;
+		min-width: 880px;
+		height: auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+}
+.hdr_navigation_wrapper_first {
+	width: 75vw;
+	max-width: 100%;
+	min-width: 880px;
+	height: 7vh;
+	min-height: 55px;
+	background-color: #525c6e;
+}
+
+.header_navigation button{
+	width: 100px;
+	height: 30px;
+	margin: 10px 0 0 10px;
+	padding-left: 2px;
+	line-height: 28px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #ccc;
+	background-color: #d40000;
+	border-radius: 10px;
+}
+.header_navigation button:hover{
+	opacity: 0.7 ;
+	cursor: pointer;
+}
+
+.hdr_navigation_wrapper_second {
+	width: 75vw;
+	max-width: 100%;
+	min-width: 880px;
+	height: 8vh;
+	min-height: 65px;
+	background-color: #525c6e;
+}
+.hdr_navigation_wrapper_second button{
+	margin: 4px 0 0 30px;
+	cursor: pointer;
+}
+.hdr_navigation_wrapper_second button:hover{
+	opacity: 0.7 ;
+}
+.header_button_serch img{
+	width: 55px;
+	height: 55px;
+}
+.header_button_useradd img{
+	width: 55px;
+	height: 55px;
+}
+.header_button_login img{
+	width: 55px;
+	height: 55px;
+}
+
+/*フッターエリア*/
+footer {
+	width: 100vw;
+	min-width: 1080px;
+	height: 10vh;
+	min-height: 120px;
+	margin: 0 auto;
+	padding: 5px 0 0 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	background-color: #525c6e;
+
+}
+footer a{
+	text-decoration: none;
+}
+.ftr_title_first{
+	border-top: 2px dashed #000; width: 24%;
+	border-bottom: 2px dashed #000; width: 24%;
+}
+.ftr_title_second{
+	border-top: 2px dashed #000; width: 33%;
+	border-bottom: 2px dashed #000; width: 33%;
+}
+.ftr_title_third{
+	border-top: 2px dashed #000; width: 55%;
+	border-bottom: 2px dashed #000; width: 55%;
+}
+.ftr_navigation_wrapper_first{
+	width: 33vw;
+	max-width: 100%;
+	min-width: 360px;
+	height: 9vh;
+	min-height: 100px;
+	background-color: #525c6e;
+}
+.ftr_navigation_wrapper_second{
+	width: 33vw;
+	max-width: 100%;
+	min-width: 360px;
+	height: 9vh;
+	min-height: 100px;
+	background-color: #525c6e;
+}
+.ftr_navigation_wrapper_third{
+	width: 34vw;
+	max-width: 100%;
+	min-width: 360px;
+	height: 9vh;
+	min-height: 100px;
+	background-color: #525c6e;
+}
+.cpr{
+	width: 100vw;
+	max-width: 100%;
+	min-width: 1080px;
+	height: 1vh;
+	min-height: 20px;
+	text-align: center;
+	background-color: #d40000;
+
+}
+footer li,h2{
+	margin: 1px 0 0 2px;
+}
+
+
+/* フォームスタイルのリセット */
+input,button,textarea,select{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance:none;
+}
