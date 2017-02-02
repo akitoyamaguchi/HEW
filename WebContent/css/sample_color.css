@@ -1,0 +1,22 @@
+.wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.main{
+  width: 70vw;
+  height: 100vh;
+  background-color: #d3d3d3;
+  float: left;
+}
+.sub{
+  width: 20vw;
+  height: 100vh;
+  /*background-color: #414141;*/
+  background-color: #414e5d;
+}
+.akcent{
+  width: 10vw;
+  height: 100vh;
+  background-color: #d40000;
+}

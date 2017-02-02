@@ -3,19 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="google" value="notranslate">
-<title>会員登録画面</title>
+<title>決済方法選択画面</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
-<link href="css/input.css" rel="stylesheet" type="text/css">
+<link href="css/payment.css" rel="stylesheet" type="text/css">
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
-
 <style type="text/css">
-
 </style>
+<script type="text/javascript">
+<!--
+
+// -->
+</script>
 </head>
 <body>
   <!-- 全体ラッパー -->
-<div class="wrapper">
-    <!-- ヘッダー //共通項目-->
+  <div class="wrapper">
+    <!-- ヘッダー -->
     <header>
       <div class="header_logo">
         <h1><img src="logo/try-on.png" onclick="location.href='index.html'"/></h1>
@@ -37,45 +40,51 @@
     </header>
 
   <!-- メインコンテンツ -->
-    <article class="member_register_wrapper">
-      <section class="member_register">
-
-        <h2 class="m_r_title">会員登録</h2>
-        <div class="form_wrapper">
-          <form action="#" method="post">
-            <dl>
-              <dt>メールアドレス</dt>
-                <dd>
-                  <input type="text" size="40" placeholder="メールアドレスを入力" name="address" />
-                </dd>
-            </dl>
-            <dl>
-              <dt>メールアドレス確認</dt>
-                <dd>
-                  <input type="text" size="40" placeholder="再度メールアドレスを入力" name="address_con" />
-                </dd>
-            </dl>
-            <dl>
-              <dt>パスワード</dt>
-                <dd>
-                  <input type="password" size="40" placeholder="パスワードを入力" name="passwd" />
-                </dd>
-            </dl>
-            <dl>
-              <dt>パスワード確認</dt>
-                <dd>
-                  <input type="password" size="40" placeholder="再度パスワードを入力" name="passwd_con" />
-                </dd>
-            </dl>
-          </form>
-        </div><!--form_wrapper終了-->
-        <div class="btn_confirmation">
-              <input type="submit" name="act" value="" class="kakunin" >
+  <article class="payment_wrapper">
+    <h1 class="payment_title">お支払い方法の選択</h1>
+    <section class="payment_credit">
+      <div class="payment_credit_label">
+        <p>ご登録のクレジットカード</p>
+        <p>カード名義人</p>
+        <p>有効期限</p>
+      </div>
+      <form class="credit_form" action="#" method="post">
+        <input type="radio" name="credit" id="1st" value="1"  checked/><label for="1st">JCB 下四桁 5555</label><p>HALTARO</p><p>01/2017</p>
+        <input type="radio" name="credit" id="2nd" value="2" /><label for="2nd">Visa 下四桁 8888</label><p>HALTARO</p><p>01/2017</p>
+      </form>
+      <div class="add_credit_wrapper">
+        <button class="add_credit">クレジットカードの追加</button>
+      </div>
+      <div class="select_credit_btn_wrapper">
+        <inpput type="submit" name="" class="select_credit_btn" /></inpput>
+        <div class="credit_description">
+          <p>※使用するカードを選択して「クレジットカードボタン」を押して下さい。</p>
         </div>
+      </div>
+    </section><!--クレジットカードセクション終了-->
 
-      </section>
-    </article>
-    <!--フッター　//共通項目-->
+    <section class="credit_possible">
+      <h2>以下のクレジットカードがご利用いただけます。</h2>
+      <p><img src="img/jcb.gif" alt="jcbカード"></imag></p>
+      <p><img src="img/visa.png" alt="visaカード"></imag></p>
+      <p><img src="img/mc.jpg" alt="masterカード"></imag></p>
+      <p><img src="img/ae.jpg" alt="americanecsepresカード"></imag></p>
+    </section>
+
+    <section class="payment_cash">
+      <form action="#" method="post">
+        <div class="select_cash_btn_wrapper">
+          <inpput type="submit" name="" class="select_cash_btn"></inpput>
+          <div class="cash_description">
+            <p>※代金引換は国内配送のみ。<br />代引手数料がかかります。</p>
+          </div>
+        </div>
+      </form>
+    </section>
+
+  </article>
+
+    <!--フッター-->
     <footer>
       <nav class="ftr_navigation_wrapper_first">
         <h2 class="ftr_title_first">取扱商品</h2>
@@ -101,7 +110,7 @@
       </nav>
       <small class="cpr">Copyright(C)</small>
     </footer>
-</div>
+  </div>
 
 </body>
 </html>
