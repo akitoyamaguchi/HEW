@@ -1,0 +1,47 @@
+.mypage_wrapper{
+  width: 600px;
+  margin: 16px auto;
+}
+
+.mypage_wrapper h2{
+  font-size: 30px;
+}
+
+.item_box_wrapper{
+  display: flex;
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.flex_row{
+  display: flex;
+  width: 624px;
+  padding: 0 12px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.flex_column{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.item_box{
+  width: 400px;
+  margin: 16px auto 16px;
+  padding: 8px;
+  border: solid 1px #000;
+}
+
+.flex_column a{
+  display: block;
+  width: auto;
+  padding: 4px;
+  margin-bottom: 4px;
+  text-align: right;
+  text-decoration: none;
+}

@@ -1,0 +1,49 @@
+/*メイン*/
+.member_register_wrapper{
+	width: 80vw;
+	height: 50vh;
+	padding:0 32px 0 32px;
+	margin: 20px auto;
+	background-color: ;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.m_r_title{
+	font-size: 26px;
+	padding: 3px 0 5px 0;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.btn_confirmation{
+	padding: 0 0 20px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.btn_confirmation img{
+	width: 110px;
+	height: 110px;
+}
+.btn_confirmation img:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+/* フォームスタイルのリセット */
+input,button,textarea,select,{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance:none;
+}
+.result_btn:hover{
+	background: #3c81cd;
+}
+.result_btn a{
+	font-size: 18px;
+	color: #fff;
+	text-decoration:none;
+}
+.result_btn a:hover{
+	text-decoration:underline /*overline*/;
+}
