@@ -1,10 +1,11 @@
 /**
- *aaaaa
+ *
  */
 window.onload = init;
 
 function init() {
-  document.getElementById('memRegConfBtn').addEventListener('click',comp);
+  document.getElementsByName('act')[0].addEventListener('click',comp);
+  console.log('test');
 }
 
 function comp() {
@@ -12,33 +13,47 @@ function comp() {
   var addConValue = document.getElementsByName('address_con')[0].value;
   var passValue = document.getElementsByName('passwd')[0].value;
   var passConValue = document.getElementsByName('passwd_con')[0].value;
-
-  var errMes = '';
-
-  if(addValue != addConValue) {
-    errMes = 'メールアドレスが違います。';
+  var errMes = [];
+  var firstCheck = true;
+  var secondCheck = true;
+  
+  // 多分あとでチェックの手順を変更します。
+  // だれかうまい具合に直してくれてもいいのよ
+  if(addValue == '') {
+    errMes.push('メールアドレスを入力してください');
+    firstCheck = false;
   }
-  if(passValue != passConValue) {
-    errMes += '\nパスワードが違います。';
+  if(addConValue == '') {
+    errMes.push('メールアドレスの確認を入力してください');
+    firstCheck = false;
   }
-  if(addValue == addConValue && passValue == passConValue) {
+  if(passValue == '') {
+    errMes.push('パスワードを入力してください');
+    firstCheck = false;
+  }
+  if(passConValue == '') {
+    errMes.push('パスワードの確認を入力してください');
+    firstCheck = false;
+  }
+  
+  if(firstCheck == true) {
+    if(addValue != addConValue) {
+      errMes.push('メールアドレスが合っていません');
+      secondCheck = false;
+    }
+    if(passValue != passConValue) {
+      errMes.push('パスワードが合っていません');
+      secondCheck = false;
+    }
+  }
+      
+  if(firstCheck == true && secondCheck == true) {
     //document.getElementById('form').submit();
     console.log('Match');
   } else {
-    createModal();
-    console.log('Miss Match');
+    //エラーメッセージの表示
+    //誰かこの部分をモーダルで作ってくださいおねがいします。
+    window.alert(errMes.join('\n') );
   }
 
-}
-
-function createModal() {
-  var overWrap = document.createElement('div');
-  overWrap.id = 'background';
-  overWrap.style.width = '100%';
-  overWrap.style.height = '100%';
-  overWrap.style.backgroundColor = '#000';
-
-  document.body.insertBefore(overWrap, document.body.firstChild);
-  console.log(document.body.firstChild.nodeName);
-  console.log('Modal Create');
 }

@@ -19,3 +19,6 @@ Recommented：MariaDB Connector/J 1.5 Series
 ## Usage
 JavaScript libraries location is `WebContent > js > lib`  
 JDBC driver location is `WebContent > WEB-INF > lib`
+
+## Other
+When correcting the place where the correction request is issued, please describe where you corrected.
