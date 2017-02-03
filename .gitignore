@@ -1,4 +1,5 @@
 /build/
 /.classpath
 /WebContent/WEB-INF/lib/*
-/bin/
+/WebContent/js/lib/
+/bin/*
