@@ -6,7 +6,7 @@ import jp.ac.hal.db.*;
 public class HewDb {
 
     //ユーザー情報追加メソッド
-    public void UserAdd(String id,String mailAdd,String passwd) throws ClassNotFoundException, SQLException{
+    public void userAdd(String id,String mailAdd,String passwd) throws ClassNotFoundException, SQLException{
     	SqlValueBeans svb = new SqlValueBeans();;
 	
     	// 登録する情報をBeansに格納
