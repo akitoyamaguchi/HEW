@@ -64,6 +64,12 @@ public class Dao {
 		return state.executeQuery();
 	}
 	
+	// SQL(プリペアードなしでexecuteQueryのみ)実行
+	public ResultSet executeQ(String sql) throws SQLException {
+		this.state = this.conn.prepareStatement(sql);
+		return state.executeQuery();
+	}
+	
 	// SQL(executeUpdateのみ)実行
 	public int executeU(String sql, SqlValueBeans beans) throws SQLException {
 		this.state = this.conn.prepareStatement(sql);
@@ -75,6 +81,12 @@ public class Dao {
 		return state.executeUpdate();
 	}
    
+	// SQL(プリペアードなしでexecuteUpdateのみ)実行
+	public int executeU(String sql) throws SQLException {
+		this.state = this.conn.prepareStatement(sql);
+		return state.executeUpdate();
+	}
+	
 	// プリペアードステートメントに値をセット
 	private void setPreparedStatement(ArrayList<Object> values) throws SQLException {
 		for(int i = 0; i < values.size(); i++) {
