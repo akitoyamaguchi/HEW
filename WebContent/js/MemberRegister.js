@@ -48,6 +48,7 @@ function comp() {
   }
       
   if(firstCheck == true && secondCheck == true) {
+    // submit先（html）でidとpassを受け取る処理の実装
     //document.getElementById('form').submit();
     console.log('Match');
   } else {

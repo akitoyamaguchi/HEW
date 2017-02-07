@@ -2,22 +2,17 @@
 ** 連絡事項
 **********************************************************
 **********************************************************
-** 飯山の作ったDAOの訂正作業を行っています。
 ** 手の空いている方はご協力おねがいします。
 **
-** 現状の修正点
-** > 挿入や更新などに分割されているクラスを1つに集約
-** > 一部コネクションの破棄が存在しないメソッドの修正 
+** 現状の問題点
+** > 正常動作することの確認 
 **********************************************************/
 /**********************************************************
-**P.S. 
-** これは本来のDAOではありません。なんちゃってDAOです。
-** 本来のDAOはデータベースアクセスし結果を返すだけのものです。
-** 今回は時間が無いためDAOが各種処理（ログインや登録など）の一部を代行しています。
-** ただし、変更がかかる恐れがある部分は別途DB_SETTINGファイルを用いて定数化しています。
+**P.S.
+** 変更がかかる恐れがある部分は別途DB_SETTINGファイルを用いて定数化しています。
 **********************************************************/
 
-package jp.ac.hal.hew;
+package jp.ac.hal.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -25,19 +20,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
-public class HewDao {
+import jp.ac.hal.hew.UserInfoBean;
+
+public class Dao {
 	Connection conn;
 	ResultSet resSet;
 	PreparedStatement state;
 	
 	// DBドライバーの読み込み
-	public HewDao() throws ClassNotFoundException {
+	public Dao() throws ClassNotFoundException {
 		Class.forName("org.mariadb.jdbc.Driver");	
 	}
 	
 	// コネクションの確立
-	public void connecting() throws SQLException {
+	public void connect() throws SQLException {
 		this.conn = DriverManager.getConnection(
 				"jdbc:mariadb//"
 				+ DB_SETTINGS.HOST_NAME + "/d_meganestore?user="
@@ -46,86 +44,50 @@ public class HewDao {
 	}
 	
 	//コネクションの破棄
-	public void killConnection() throws SQLException {
-		//未実装
-		if(conn != null) {
-			conn.close();
-		}
-	};
-	
-	//ユーザ登録処理
-	public int userAdd(UserInfoBean uib) throws SQLException {
-		//ユーザ情報の取得
-		String id = uib.getUserId();
-		String mail = uib.getUserMail();
-		String pass = uib.getUserPass();
-		
-		//sql文生成
-		String sql = "INSERT INTO" + DB_SETTINGS.TABLE_USERS +
-				"(users_user_id,user_mail_address,user_password,is_member) VALUES (?,?,?,0)";
-		
-		//プリペアの生成
-		this.state = this.conn.prepareStatement(sql);
-		this.state.setString(1, id);
-		this.state.setString(2, mail);
-		this.state.setString(3, pass);
-		
-		//executeUpdateは更新した行数が戻ります。
-		int retRow = this.state.executeUpdate();
-		
-		if(state != null) {
-			state.close();			
-		}
-		
-		return retRow;
-	};
-	
-	//ログイン処理
-	public Boolean login(UserInfoBean uib) throws SQLException {
-		Boolean login = false;
-		
-		String id = uib.getUserId();
-		String pass = uib.getUserPass();
-		
-		String sql = "SELECT count(*) FROM" + DB_SETTINGS.TABLE_USERS +
-				"WHERE users_user_id = ? AND user_password= ? ";
-		
-		this.state = this.conn.prepareStatement(sql);
-		this.state.setString(1, id);
-		this.state.setString(2, pass);
-		
-		this.resSet = state.executeQuery();
-		
-		this.resSet.next();
-		//ログインできたら
-		if(this.resSet.getInt("count(*)") == 1 ) {
-			login = true;
-		}
-		
-		//クローズ処理
-		if(this.resSet != null) {
+	public void killConnetcion() throws SQLException {
+		// resSetが破棄されていない場合は破棄する
+		if(!this.resSet.isClosed() ) {
 			this.resSet.close();
 		}
-		if(this.state != null) {
-			this.state.close();
+		this.conn.close();
+	}
+	
+	// SQL(executeQueryのみ)実行
+	public ResultSet exectuteQ(String sql, SqlValueBeans beans) throws SQLException {
+		this.state = this.conn.prepareStatement(sql);
+		ArrayList<Object> values = beans.getSqlValue();
+		
+		for(int i = 0; i < values.size(); i++) {
+			if(values.get(i) instanceof Integer) {
+				this.state.setInt(i + 1, ( (Integer)values.get(i) ).intValue() );
+			} else if(values.get(i) instanceof String) {
+				this.state.setString(i + 1, (String)values.get(i) );
+			} else if(values.get(i) instanceof Boolean) {
+				this.state.setBoolean(i + 1, (Boolean)values.get(i) );
+			}
+		}
+
+		return state.executeQuery();
+	}
+	
+	// SQL(executeUpdateのみ)実行
+	public int executeU(String sql, SqlValueBeans beans) throws SQLException {
+		this.state = this.conn.prepareStatement(sql);
+		ArrayList<Object> values = beans.getSqlValue();
+		
+		for(int i = 0; i < values.size(); i++) {
+			if(values.get(i) instanceof Integer) {
+				this.state.setInt(i + 1, ( (Integer)values.get(i) ).intValue() );
+			} else if(values.get(i) instanceof String) {
+				this.state.setString(i + 1, (String)values.get(i) );
+			} else if(values.get(i) instanceof Boolean) {
+				this.state.setBoolean(i + 1, (Boolean)values.get(i) );
+			}
 		}
 		
-		return login;
-	};
-	
-	//更新処理
-	public int update() throws SQLException {
-		// 未実装
-		return 1;
-	};
-	
-	//削除処理
-	public int delete() throws SQLException {
-		//未実装
-		return 1;
-	};
-	
-    
+		return state.executeUpdate();
+	}
+   
 /********************************************************************************************************************************
 **      以下飯山の作成したDAO
 ********************************************************************************************************************************/
