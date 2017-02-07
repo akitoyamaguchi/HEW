@@ -49,6 +49,7 @@ public class Dao {
 		if(!this.resSet.isClosed() ) {
 			this.resSet.close();
 		}
+		this.state.close();
 		this.conn.close();
 	}
 	
@@ -57,16 +58,9 @@ public class Dao {
 		this.state = this.conn.prepareStatement(sql);
 		ArrayList<Object> values = beans.getSqlValue();
 		
-		for(int i = 0; i < values.size(); i++) {
-			if(values.get(i) instanceof Integer) {
-				this.state.setInt(i + 1, ( (Integer)values.get(i) ).intValue() );
-			} else if(values.get(i) instanceof String) {
-				this.state.setString(i + 1, (String)values.get(i) );
-			} else if(values.get(i) instanceof Boolean) {
-				this.state.setBoolean(i + 1, (Boolean)values.get(i) );
-			}
-		}
-
+		// プリペーアドステートメントに値をセット
+		setPreparedStatement(values);
+		
 		return state.executeQuery();
 	}
 	
@@ -75,6 +69,14 @@ public class Dao {
 		this.state = this.conn.prepareStatement(sql);
 		ArrayList<Object> values = beans.getSqlValue();
 		
+		// プリペーアドステートメントに値をセット
+		setPreparedStatement(values);
+		
+		return state.executeUpdate();
+	}
+   
+	// プリペアードステートメントに値をセット
+	private void setPreparedStatement(ArrayList<Object> values) throws SQLException {
 		for(int i = 0; i < values.size(); i++) {
 			if(values.get(i) instanceof Integer) {
 				this.state.setInt(i + 1, ( (Integer)values.get(i) ).intValue() );
@@ -84,10 +86,8 @@ public class Dao {
 				this.state.setBoolean(i + 1, (Boolean)values.get(i) );
 			}
 		}
-		
-		return state.executeUpdate();
 	}
-   
+	
 /********************************************************************************************************************************
 **      以下飯山の作成したDAO
 ********************************************************************************************************************************/
