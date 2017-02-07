@@ -2,11 +2,14 @@ package jp.ac.hal.hew;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import jp.ac.hal.db.*;
 
 public class HewDb {
 
-    // ユーザー情報追加メソッド
+    // ユーザー登録処
     public void userAdd(String id,String mailAdd,String passwd) {
     	SqlValueBeans svb = new SqlValueBeans();
 	
@@ -31,7 +34,7 @@ public class HewDb {
         }
     }
 
-    // ログインメソッド
+    // ログイン処理
     public int userLogin(String mailAdd, String passwd) {
     	SqlValueBeans svb = new SqlValueBeans();
     	int result = 3;
@@ -47,16 +50,56 @@ public class HewDb {
     		try(ResultSet res = dao.exectuteQ(sql, svb) ) {
     			res.next();
     			int cnt = res.getInt("count(*)");
-    			// ログイン成功
-    			if(cnt == 1) {
-    				result = 1;
     			// ログイン失敗
-    			} else if(cnt == 0) {
-    				result = 2;
+    			if(cnt == 0) {
+    				result = 0;
+    			// ログイン成功
+    			} else if(cnt == 1) {
+    				result = 1;
     			//　異常値
     			} else {
-    				result = 3;
+    				result = 2;
     			}
+    		}
+    	}catch(ClassNotFoundException cnfe) {
+    		// 未実装
+    	}catch(SQLException sqle) {
+    		// 未実装
+    	}
+    	
+    	return result;
+    }
+
+    // 退会処理
+    public int withdrawal(String id, String passwd) {
+    	SqlValueBeans svb = new SqlValueBeans();
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/mm/dd HH:mm:ss");
+    	Date date = new Date();
+    	int result = 2;
+    	
+    	String sql = "UPDATE t_tr_users SET is_member = 1 , user_withdrawal_at = ? WHERE users_user_id = ? AND user_password= ?";
+    
+    	//現在日付の取得
+    	String datetimeVal = sdf.format(date);    
+    
+    	svb.setSqlValue(datetimeVal);
+    	svb.setSqlValue(id);
+    	svb.setSqlValue(passwd);
+
+    	try {
+    		Dao dao = new Dao();
+    		dao.connect();
+    		int cnt = dao.executeU(sql, svb);
+    		
+    		// 退会失敗
+    		if(cnt == 0) {
+    			result = 0;
+    		// 退会成功
+    		} else if(cnt == 1) {
+    			result = 1;
+    		//異常値
+    		} else {
+    			result = 2;
     		}
     	}catch(ClassNotFoundException cnfe) {
     		// 未実装
