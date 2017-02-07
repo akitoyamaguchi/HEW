@@ -1,4 +1,4 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.db;
 
 public class DB_SETTINGS {
 	
