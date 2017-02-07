@@ -28,20 +28,20 @@ public class UserAdd extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-		//リクエストの文字コード設定
-		request.setCharacterEncoding("UTF-8");
-		//エラーフラグ設定
+        // TODO Auto-generated method stub
+        doGet(request, response);
+        //リクエストの文字コード設定
+        request.setCharacterEncoding("UTF-8");
+        //エラーフラグ設定
         boolean boolErrFlg = false;
         //エラーコード
         String strErr="";
 
 
-		//登録処理
+        //登録処理
         if(request.getParameter("REGIST")!=null){
-          //登録ボタン押下処理
-          //入力されたメールアドレスとパスワードをデータ取得
+          //確認ボタン押下処理
+          //入力されたメールアドレスとパスワードの取得
           String strAdd = request.getParameter("address");
           String strAddCon = request.getParameter("address_con");
           String strPasswd = request.getParameter("passwd");
@@ -49,20 +49,18 @@ public class UserAdd extends HttpServlet {
 
           //入力チェック（メールアドレスとパスワードの入力チェック）
           if(strAdd !=null && !strAdd.isEmpty()
-            ||strAddCon !=null && !strAddCon.isEmpty()
-            ||strPasswd !=null && !strPasswd.isEmpty()
-            ||strPasswdCon !=null && !strPasswdCon.isEmpty()){
-
+            && strAddCon !=null && !strAddCon.isEmpty()
+            && strPasswd !=null && !strPasswd.isEmpty()
+            && strPasswdCon !=null && !strPasswdCon.isEmpty()){
+              //再入力の一致確認
               if(strAdd == strAddCon){
                   if(strPasswd == strPasswdCon){
-                      //HewDAO.javaへ飛ばす処理をここに書く
-                  }
-                  else if(strPasswd != strPasswdCon){
+                      //DAO.javaへ飛ばす処理をここに書く
+                  }else if(strPasswd != strPasswdCon){
                       /*パスワードの再入力が不一致な為
                        *エラー画面へ飛ばす処理をここに書く*/
                   }
-              }
-              else if(strAdd != strAddCon){
+              }else if(strAdd != strAddCon){
                   /*メールアドレスの再入力が不一致な為
                    *エラー画面へ飛ばす処理をここに書く*/
               }
@@ -73,15 +71,13 @@ public class UserAdd extends HttpServlet {
 
         //転送処理
         String strDisp;
-        if(boolErrFlg)
-        {
+        if(boolErrFlg){
             //処理の失敗時（Result.jspに転送）
             strDisp = "Error.jsp";
             //エラーコードをリクエストに設定
             request.setAttribute("Err", strErr);
         }
-        else
-        {
+        else{
             //処理の成功時（Error.jspに転送）
             strDisp = "Result.jsp";
         }
