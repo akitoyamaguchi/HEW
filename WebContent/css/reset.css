@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, 
-pre,a, abbr, acronym, address, code,del, dfn, em, img, q, dl, dt, dd, ol, 
-ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, 
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote,
+pre,a, abbr, acronym, address, code,del, dfn, em, img, q, dl, dt, dd, ol,
+ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead,
 tr, th, td {
  margin: 0;
  padding: 0;
@@ -38,7 +38,7 @@ blockquote, q {
 
 a img {
  border: none;
-} 
+}
 
 ul,ol{
 	list-style-type:none;
@@ -46,4 +46,15 @@ ul,ol{
 
 address{
 	font-style: normal;
+}
+input,button,textarea,select{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance:none;
 }
