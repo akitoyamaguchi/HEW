@@ -12,9 +12,11 @@ Recommented：MariaDB Connector/J 1.5 Series
 
 ### JavaScript Library
 * [Three.js][]
+* [jQuery][]
 
 [MariaDB]: https://mariadb.org/ "MariaDB"
 [Three.js]: https://threejs.org/ "Three.js"
+[jQuery]: https://jquery.com/ "jQuery"
 
 ## Usage
 JavaScript libraries location is `WebContent > js > lib`  
