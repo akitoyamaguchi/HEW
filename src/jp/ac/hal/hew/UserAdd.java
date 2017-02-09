@@ -53,14 +53,14 @@ public class UserAdd extends HttpServlet {
             && strPasswd !=null && !strPasswd.isEmpty()
             && strPasswdCon !=null && !strPasswdCon.isEmpty()){
               //再入力の一致確認
-              if(strAdd == strAddCon){
-                  if(strPasswd == strPasswdCon){
+              if(strAdd.equals(strAddCon)){
+                  if(strPasswd.equals(strPasswdCon)){
                       //DAO.javaへ飛ばす処理をここに書く
-                  }else if(strPasswd != strPasswdCon){
+                  }else if(!(strPasswd.equals(strPasswdCon))){
                       /*パスワードの再入力が不一致な為
                        *エラー画面へ飛ばす処理をここに書く*/
                   }
-              }else if(strAdd != strAddCon){
+              }else if(!(strAdd.equals(strAddCon))){
                   /*メールアドレスの再入力が不一致な為
                    *エラー画面へ飛ばす処理をここに書く*/
               }
