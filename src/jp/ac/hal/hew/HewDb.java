@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import jp.ac.hal.db.*;
+import jp.ac.hal.debug.GeneralDebug;
+import jp.ac.hal.debug.SQLDebug;
 
 public class HewDb {
 
@@ -28,9 +30,15 @@ public class HewDb {
         	// SQL文実行
         	dao.executeU(sql, svb);
         }catch(ClassNotFoundException cnfe) {
+        	// デバッグ用
+        	GeneralDebug.ClassNotFoundExceptionDebug(cnfe);
+        	
         	// 未実装
         }catch(SQLException sqle) {
-        	// 未実装
+        	// デバッグ用
+        	SQLDebug.SQLExceptionPrint(sqle);
+        	
+        	// 未実装        	
         }
     }
 
@@ -62,8 +70,14 @@ public class HewDb {
     			}
     		}
     	}catch(ClassNotFoundException cnfe) {
+    		// デバッグ用
+        	GeneralDebug.ClassNotFoundExceptionDebug(cnfe);
+        	
     		// 未実装
     	}catch(SQLException sqle) {
+    		// デバッグ用
+        	SQLDebug.SQLExceptionPrint(sqle);
+    		
     		// 未実装
     	}
     	
