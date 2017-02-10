@@ -55,19 +55,33 @@ public class UserAdd extends HttpServlet {
               //再入力の一致確認
               if(strAdd.equals(strAddCon)){
                   if(strPasswd.equals(strPasswdCon)){
-                      //DAO.javaへ飛ばす処理をここに書く
+                      //DAOへ飛ばす処理をここに書く
                   }else if(!(strPasswd.equals(strPasswdCon))){
                       /*パスワードの再入力が不一致な為
-                       *エラー画面へ飛ばす処理をここに書く*/
+                       *エラーを飛ばす処理をここに書く*/
                   }
               }else if(!(strAdd.equals(strAddCon))){
                   /*メールアドレスの再入力が不一致な為
-                   *エラー画面へ飛ばす処理をここに書く*/
+                   *エラーを飛ばす処理をここに書く*/
               }
-
           }//入力チェック（終）
-
         }//登録処理（終）
+
+        //ログイン処理
+        if(request.getParameter("REGIST")!=null){
+          //ログインボタン押下処理
+          //入力されたメールアドレスとパスワードの取得
+          String strAdd = request.getParameter("address");
+          String strPasswd = request.getParameter("passwd");
+          //入力チェック（メールアドレスとパスワードの入力チェック）
+          if(strAdd !=null && !strAdd.isEmpty()
+            && strPasswd !=null && !strPasswd.isEmpty()){
+              /* 入力チェック完了後
+               * DAOに飛ばす処理を書く*/
+          }//入力チェック（終）
+        }//ログイン処理(終)
+
+
 
         //転送処理
         String strDisp;
