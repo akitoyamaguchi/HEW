@@ -1,60 +1,49 @@
-/**
- *
- */
 window.onload = init;
 
 function init() {
-  document.getElementsByName('act')[0].addEventListener('click',comp);
-  console.log('test');
+  $('#submit').click(comp);
 }
 
 function comp() {
-  var addValue = document.getElementsByName('address')[0].value;
-  var addConValue = document.getElementsByName('address_con')[0].value;
-  var passValue = document.getElementsByName('passwd')[0].value;
-  var passConValue = document.getElementsByName('passwd_con')[0].value;
-  var errMes = [];
-  var firstCheck = true;
-  var secondCheck = true;
+  var add = $('input[name="address"]').val();
+  var addCon = $('input[name=address_con]').val();
+  var passwd = $('input[name=passwd]').val();
+  var passwdCon = $('input[name=passwd_con]').val();
+
+  var errorMes = '';
+  var isError = false;
   
-  // 多分あとでチェックの手順を変更します。
-  // だれかうまい具合に直してくれてもいいのよ
-  if(addValue == '') {
-    errMes.push('メールアドレスを入力してください');
-    firstCheck = false;
+  console.log(add);
+  console.log(addCon);
+  console.log(passwd);
+  console.log(passwdCon);
+
+  if(!passwd.match(/[A-Za-z0-9-_]+/) ) {
+    errorMes += 'パスワードが正しくありません\n'
+    isError = true;
   }
-  if(addConValue == '') {
-    errMes.push('メールアドレスの確認を入力してください');
-    firstCheck = false;
+  if(!passwdCon.match(/[A-Za-z0-9-_]+/) ) {
+    errorMes += 'パスワードの確認が正しくありません\n'
+    isError = true;
   }
-  if(passValue == '') {
-    errMes.push('パスワードを入力してください');
-    firstCheck = false;
+  if(add !== addCon) {
+    errorMes += 'メールアドレスが合っていません\n'
+    isError = true;
   }
-  if(passConValue == '') {
-    errMes.push('パスワードの確認を入力してください');
-    firstCheck = false;
-  }
-  
-  if(firstCheck == true) {
-    if(addValue != addConValue) {
-      errMes.push('メールアドレスが合っていません');
-      secondCheck = false;
-    }
-    if(passValue != passConValue) {
-      errMes.push('パスワードが合っていません');
-      secondCheck = false;
-    }
-  }
-      
-  if(firstCheck == true && secondCheck == true) {
-    // submit先（html）でidとpassを受け取る処理の実装
-    //document.getElementById('form').submit();
-    console.log('Match');
-  } else {
-    //エラーメッセージの表示
-    //誰かこの部分をモーダルで作ってくださいおねがいします。
-    window.alert(errMes.join('\n') );
+  if(passwd !== passwdCon) {
+    errorMes += 'パスワードが合っていません\n'
+    isError = true;
   }
 
+  if(isError === true) {
+    alert(errorMes);
+  } else {
+    alert('OK');
+    dateSend(add, passwd);
+  }
+}
+
+function dateSend(add, passwd) {
+  location.href = 'member_register_confirmation.html?add=' +escape(add)+
+    '&pas=' +escape(passwd);
 }
