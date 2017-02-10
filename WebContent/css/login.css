@@ -180,11 +180,24 @@ input[type="password"],textarea{
 	min-width: 250px;
 	border-radius: 3px;
 }
+input[type="email"],textarea{
+	padding: 10px;
+	color: #444;
+	border: solid 1px #ccc;
+	margin: 3px 0;
+	width: 20vw;
+	min-width: 250px;
+	border-radius: 3px;
+}
 input[type="text"]:focus,textarea{
 	border: 1px solid #1abc9c;
 	box-shadow: 1px 1px 3px #48a;
 }
 input[type="password"]:focus,textarea{
+	border: 1px solid #1abc9c;
+	box-shadow: 1px 1px 3px #48a;
+}
+input[type="email"]:focus,textarea{
 	border: 1px solid #1abc9c;
 	box-shadow: 1px 1px 3px #48a;
 }
