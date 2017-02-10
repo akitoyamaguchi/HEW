@@ -145,20 +145,6 @@ p{
 	/*background-color: #fc0000;*/
 	cursor: pointer;
 }
-
-/* フォームスタイルのリセット */
-input,button,textarea,select{
-	margin: 0;
-	padding: 0;
-	background: none;
-	border: none;
-	border-radius: 0;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance:none;
-}
-
 /* テキストフォームの設定(text) */
 input[type="text"],textarea{
 	padding: 10px;
@@ -180,11 +166,24 @@ input[type="password"],textarea{
 	min-width: 250px;
 	border-radius: 3px;
 }
+input[type="email"],textarea{
+	padding: 10px;
+	color: #444;
+	border: solid 1px #ccc;
+	margin: 3px 0;
+	width: 20vw;
+	min-width: 250px;
+	border-radius: 3px;
+}
 input[type="text"]:focus,textarea{
 	border: 1px solid #1abc9c;
 	box-shadow: 1px 1px 3px #48a;
 }
 input[type="password"]:focus,textarea{
+	border: 1px solid #1abc9c;
+	box-shadow: 1px 1px 3px #48a;
+}
+input[type="email"]:focus,textarea{
 	border: 1px solid #1abc9c;
 	box-shadow: 1px 1px 3px #48a;
 }

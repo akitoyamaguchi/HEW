@@ -26,21 +26,12 @@ header {
 	background-color: #525c6e;
 }
 .header_logo {
-	width: 25vw;
-	max-width: 100%;
-	min-width: 200px;
-	height: 15vh;
-	min-height: 120px;
-	font-size: 32px;
-	background-color: ;
+	width: auto;
+	height: 100px;
 }
 .header_logo img{
-	width: 300px;
-	max-width: 100%;
-	min-width: 100%;
-	height: 5vw;
-	min-height: 120px;
-
+	width: auto;
+	height: 110px;
 }
 .header_logo img:hover{
 	opacity: 0.7;

@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="google" value="notranslate">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>会員登録確認画面</title>
+<title>会員登録画面</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
 <link href="css/input.css" rel="stylesheet" type="text/css">
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
+
 <style type="text/css">
 
 </style>
 <script type="text/javascript" src="js/lib/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/MemberRegister.js"></script>
-  
 </head>
 <body>
   <!-- 全体ラッパー -->
@@ -38,39 +37,45 @@
         </nav>
       </div>
     </header>
-
   <!-- メインコンテンツ -->
-<!-- <div class="overall_wrapper"> -->
+    <article class="member_register_wrapper">
+      <section class="member_register">
 
-
-  <article class="member_register_confirmation_wrapper">
-    <section class="member_register_confirmation">
-      <h2 class="m_r_title">登録情報の確認</h2>
-      <form action="#" method="post">
+        <h2 class="m_r_title">会員登録</h2>
         <div class="form_wrapper">
-          <dl>
-            <dt>メールアドレス</dt>
-              <dd>
-
-              </dd>
-          </dl>
-          <dl>
-            <dt>パスワード</dt>
-              <dd>
-
-              </dd>
-          </dl>
+          <form action="#" method="post">
+            <dl>
+              <dt>メールアドレス</dt>
+                <dd>
+                  <input type="email" size="40" placeholder="メールアドレスを入力" name="address" />
+                </dd>
+            </dl>
+            <dl>
+              <dt>メールアドレス確認</dt>
+                <dd>
+                  <input type="email" size="40" placeholder="再度メールアドレスを入力" name="address_con" />
+                </dd>
+            </dl>
+            <dl>
+              <dt>パスワード</dt>
+                <dd>
+                  <input type="password" size="40" placeholder="パスワードを入力" name="passwd" />
+                </dd>
+            </dl>
+            <dl>
+              <dt>パスワード確認</dt>
+                <dd>
+                  <input type="password" size="40" placeholder="再度パスワードを入力" name="passwd_con" />
+                </dd>
+            </dl>
+          </form>
+        </div><!--form_wrapper終了-->
+        <div class="btn_confirmation">
+              <input type="submit" name="act" value="" class="kakunin" >
         </div>
-      </form>
-    </section>
 
-    <section class="btn_confirmation2">
-          <input type="submit" name="act1" value="" class="modoru">
-          <input type="submit" name="act2" value="" class="kanryou">
-    </section>
-
-  </article>
-
+      </section>
+    </article>
     <!--フッター　//共通項目-->
     <footer>
       <nav class="ftr_navigation_wrapper_first">
@@ -84,15 +89,15 @@
       <nav class="ftr_navigation_wrapper_second">
         <h2 class="ftr_title_second">登録・ログイン</h2>
         <ul class="footer_navigation">
-          <li><a href="#">ログイン</a></li>
-          <li><a href="#">新規登録</a></li>
+          <li><a href="login.html">ログイン</a></li>
+          <li><a href="member_register.html">新規登録</a></li>
         </ul>
       </nav>
       <nav class="ftr_navigation_wrapper_third">
         <h2 class="ftr_title_third">サイトのご利用について</h2>
         <ul class="footer_navigation">
-          <li><a href="#">サイトマップ</a></li>
-          <li><a href="#">お問合せ</a></li>
+          <li><a href="sitemap.html">サイトマップ</a></li>
+          <li><a href="inquiry.html">お問合せ</a></li>
         </ul>
       </nav>
       <small class="cpr">Copyright(C)</small>
