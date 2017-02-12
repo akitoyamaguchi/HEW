@@ -1,7 +1,9 @@
+'use strict';
+
 window.onload = init;
 
 function init() {
-  $('#submit').click(comp);
+  $('input[name="act"]').click(comp);
 }
 
 function comp() {
@@ -18,6 +20,23 @@ function comp() {
   console.log(passwd);
   console.log(passwdCon);
 
+  //から判定
+  if(add === null || add === '') {
+    errorMes += 'メールアドレスを入力してください\n';
+    isError = true;
+  }
+  if(addCon === null || addCon === '') {
+    errorMes += 'メールアドレスの確認を入力してください\n';
+    isError = true;
+  }
+  if(passwd === null || passwd === '') {
+    errorMes += 'パスワードを入力してください\n';
+    isError = true;
+  }
+  if(passwdCon === null || passwdCon === '') {
+    errorMes += 'パスワードの確認を入力してください\n';
+    isError = true;
+  }
   if(!passwd.match(/[A-Za-z0-9-_]+/) ) {
     errorMes += 'パスワードが正しくありません\n'
     isError = true;
@@ -37,9 +56,11 @@ function comp() {
 
   if(isError === true) {
     alert(errorMes);
+    return false;
   } else {
     alert('OK');
     dateSend(add, passwd);
+    return false
   }
 }
 
