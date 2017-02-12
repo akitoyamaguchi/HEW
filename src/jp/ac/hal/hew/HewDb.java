@@ -12,7 +12,7 @@ import jp.ac.hal.debug.SQLDebug;
 public class HewDb {
 
     // ユーザー登録処
-    public void userAdd(String id,String mailAdd,String passwd) {
+    public void userAdd(String id,String mailAdd,String passwd) throws ClassNotFoundException, SQLException {
     	SqlValueBeans svb = new SqlValueBeans();
 	
     	// 登録する情報をBeansに格納
@@ -22,28 +22,16 @@ public class HewDb {
     	//ユーザ情報登録SQL
     	String sql = "INSERT INTO t_tr_users(users_user_id,user_mail_address,user_password,is_member) VALUES (?,?,?,0)";
     	
-        try {
-        	// Daoクラスのインスタンス化
-        	Dao dao = new Dao();
-        	// DBとのコネクション確立
-        	dao.connect();
-        	// SQL文実行
-        	dao.executeU(sql, svb);
-        }catch(ClassNotFoundException cnfe) {
-        	// デバッグ用
-        	GeneralDebug.ClassNotFoundExceptionDebug(cnfe);
-        	
-        	// 未実装
-        }catch(SQLException sqle) {
-        	// デバッグ用
-        	SQLDebug.SQLExceptionPrint(sqle);
-        	
-        	// 未実装        	
-        }
+    	// Daoクラスのインスタンス化
+    	Dao dao = new Dao();
+    	// DBとのコネクション確立
+    	dao.connect();
+    	// SQL文実行
+    	dao.executeU(sql, svb);
     }
 
     // ログイン処理
-    public int userLogin(String mailAdd, String passwd) {
+    public int userLogin(String mailAdd, String passwd) throws ClassNotFoundException, SQLException {
     	SqlValueBeans svb = new SqlValueBeans();
     	int result = 3;
     	
@@ -52,40 +40,28 @@ public class HewDb {
     	
     	String sql = "SELECT count(*) FROM t_tr_users  WHERE user_mail_address = ? AND user_password= ?";
     	
-    	try {
-    		Dao dao = new Dao();
-    		dao.connect();
-    		try(ResultSet res = dao.exectuteQ(sql, svb) ) {
-    			res.next();
-    			int cnt = res.getInt("count(*)");
-    			// ログイン失敗
-    			if(cnt == 0) {
-    				result = 0;
-    			// ログイン成功
-    			} else if(cnt == 1) {
-    				result = 1;
-    			//　異常値
-    			} else {
-    				result = 2;
-    			}
-    		}
-    	}catch(ClassNotFoundException cnfe) {
-    		// デバッグ用
-        	GeneralDebug.ClassNotFoundExceptionDebug(cnfe);
-        	
-    		// 未実装
-    	}catch(SQLException sqle) {
-    		// デバッグ用
-        	SQLDebug.SQLExceptionPrint(sqle);
-    		
-    		// 未実装
-    	}
+		Dao dao = new Dao();
+		dao.connect();
+		try(ResultSet res = dao.exectuteQ(sql, svb) ) {
+			res.next();
+			int cnt = res.getInt("count(*)");
+			// ログイン失敗
+			if(cnt == 0) {
+				result = 0;
+			// ログイン成功
+			} else if(cnt == 1) {
+				result = 1;
+			//　異常値
+			} else {
+				result = 2;
+			}
+		}
     	
     	return result;
     }
 
     // 退会処理
-    public int withdrawal(String id, String passwd) {
+    public int withdrawal(String id, String passwd) throws ClassNotFoundException, SQLException {
     	SqlValueBeans svb = new SqlValueBeans();
     	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/mm/dd HH:mm:ss");
     	Date date = new Date();
@@ -100,26 +76,20 @@ public class HewDb {
     	svb.setSqlValue(id);
     	svb.setSqlValue(passwd);
 
-    	try {
-    		Dao dao = new Dao();
-    		dao.connect();
-    		int cnt = dao.executeU(sql, svb);
-    		
-    		// 退会失敗
-    		if(cnt == 0) {
-    			result = 0;
-    		// 退会成功
-    		} else if(cnt == 1) {
-    			result = 1;
-    		//異常値
-    		} else {
-    			result = 2;
-    		}
-    	}catch(ClassNotFoundException cnfe) {
-    		// 未実装
-    	}catch(SQLException sqle) {
-    		// 未実装
-    	}
+		Dao dao = new Dao();
+		dao.connect();
+		int cnt = dao.executeU(sql, svb);
+		
+		// 退会失敗
+		if(cnt == 0) {
+			result = 0;
+		// 退会成功
+		} else if(cnt == 1) {
+			result = 1;
+		//異常値
+		} else {
+			result = 2;
+		}
     	
     	return result;
     }
