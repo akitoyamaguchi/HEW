@@ -12,15 +12,14 @@ import jp.ac.hal.debug.SQLDebug;
 public class HewDb {
 
     // ユーザー登録処
-    public void userAdd(String id,String mailAdd,String passwd) throws ClassNotFoundException, SQLException {
+    public void userAdd(String mailAdd,String passwd) throws ClassNotFoundException, SQLException {
     	SqlValueBeans svb = new SqlValueBeans();
 	
     	// 登録する情報をBeansに格納
-    	svb.setSqlValue(id);
     	svb.setSqlValue(mailAdd);
     	svb.setSqlValue(passwd);
     	//ユーザ情報登録SQL
-    	String sql = "INSERT INTO t_tr_users(users_user_id,user_mail_address,user_password,is_member) VALUES (?,?,?,0)";
+    	String sql = "INSERT INTO t_tr_users(user_mail_address,user_password,is_member) VALUES (?,?,0)";
     	
     	// Daoクラスのインスタンス化
     	Dao dao = new Dao();

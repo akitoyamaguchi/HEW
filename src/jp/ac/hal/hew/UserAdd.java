@@ -1,9 +1,3 @@
-/*
- * DB問題が決着するまで少し放置
- * 
- * 
- * */
-
 package jp.ac.hal.hew;
 
 import java.io.IOException;
@@ -63,12 +57,11 @@ public class UserAdd extends HttpServlet {
           
           try {
         	  HewDb db = new HewDb();
-        	  //DBのid問題に片がつくまで一旦放置
-        	  db.userAdd(id, strAdd, hashPass);
+        	  db.userAdd(strAdd, hashPass);
           }catch(ClassNotFoundException cnfe) {
-        	  
+        	  //　未実装
           }catch(SQLException seqle) {
-        	  
+        	  // 未実装
           }
           
           //入力確認は確認用のアドレスとパスワードを取得できないので削除
