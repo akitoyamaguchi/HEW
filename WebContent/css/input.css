@@ -166,7 +166,7 @@ input[type="email"]:focus,textarea{
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
 	cursor: pointer;/*カーソルの変更*/
-	background: url(../100/kakunin.png) left top no-repeat;
+	background: url(../submit_btn/kakunin.png) left top no-repeat;
 }
 .modoru{
 	display: block;
@@ -175,7 +175,7 @@ input[type="email"]:focus,textarea{
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
 	cursor: pointer;/*カーソルの変更*/
-	background: url(../100/modoru.png) left top no-repeat;
+	background: url(../submit_btn/modoru.png) left top no-repeat;
 }
 .kanryou{
 	display: block;
@@ -184,5 +184,5 @@ input[type="email"]:focus,textarea{
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
 	cursor: pointer;/*カーソルの変更*/
-	background: url(../100/kanryou.png) left top no-repeat;
+	background: url(../submit_btn/kanryou.png) left top no-repeat;
 }

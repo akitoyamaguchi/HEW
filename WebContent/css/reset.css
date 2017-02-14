@@ -47,6 +47,7 @@ ul,ol{
 address{
 	font-style: normal;
 }
+/*form用reset.css（追加したものです）*/
 input,button,textarea,select{
 	margin: 0;
 	padding: 0;
