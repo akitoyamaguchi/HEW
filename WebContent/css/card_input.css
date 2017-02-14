@@ -166,7 +166,7 @@ input[type="email"]:focus,textarea{
 	width: 100px;
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
-	background: url(../100/tugi.png) left top no-repeat;
+	background: url(../submit_btn/tugi.png) left top no-repeat;
 }
 .next:hover{
 	opacity: 0.7;
@@ -178,7 +178,7 @@ input[type="email"]:focus,textarea{
 	width: 100px;
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
-	background: url(../100/modoru.png) left top no-repeat;
+	background: url(../submit_btn/modoru.png) left top no-repeat;
 }
 .modoru:hover{
 	opacity: 0.7;
@@ -190,7 +190,7 @@ input[type="email"]:focus,textarea{
 	width: 100px;
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
-	background: url(../100/kanryou.png) left top no-repeat;
+	background: url(../submit_btn/kanryou.png) left top no-repeat;
 }
 .kanryou:hover{
 	opacity: 0.7;

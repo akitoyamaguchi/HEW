@@ -133,5 +133,5 @@ input[type="email"]:focus,textarea{
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
 	cursor: pointer;/*カーソルの変更*/
-	background: url(../100/tugi.png) left top no-repeat;
+	background: url(../submit_btn/tugi.png) left top no-repeat;
 }

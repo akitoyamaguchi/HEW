@@ -2,7 +2,7 @@
 .index_wrapper{
 	width: 100vw;
 	min-width: 1080px;
-	height: 80vh;
+	height: 100vh;
 	min-height: 560px;
 	margin: 0 auto;
 	display: flex;

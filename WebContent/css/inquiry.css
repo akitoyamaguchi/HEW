@@ -44,7 +44,7 @@
 	width: 100px;
 	height: 100px;
 	margin: 5px auto;/*センターに表示*/
-	background: url(../100/sousin.png) left top no-repeat;
+	background: url(../submit_btn/sousin.png) left top no-repeat;
 }
 
 .sousin:hover{
