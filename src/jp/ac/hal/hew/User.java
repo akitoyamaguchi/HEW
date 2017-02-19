@@ -15,8 +15,13 @@ public class User {
         this.isMember = isMember;
         this.withdrawalAt = withdrawalAt;
     }
+    public User(String mail, String passwd, Boolean isMember) {
+		this.mail = mail;
+		this.passwd = passwd;
+		this.isMember = isMember;
+	}
 
-    public String getMail() {
+	public String getMail() {
         return mail;
     }
     public void setMail(String mail) {

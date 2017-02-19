@@ -1,7 +1,6 @@
 'use strict';
 
-//ジャンプ先のURL（servlet）を入れておいてください
-var ACTION = '';
+var result = new Object();
 
 window.onload = init;
 
@@ -13,30 +12,30 @@ function init() {
 }
 
 function execPost() {
-  var add = $('#js-address').text();
-  var pas = $('#js-passwd').text();
+  var add = result['add'];
+  var pas = result['pas'];
   console.log(add);
   console.log(pas);
   
-  var form = $('<form>');
-  form.attr('action', ACTION);
-  form.attr('method', 'post');
-  form.css('display', 'none')
+  var form = $('<form>').attr({
+    action: 'UserAdd',
+    method: 'post'
+  });
+  form.css('display', 'none');
+  
+  $('<input>').attr({
+    type: 'hidden',
+    name: 'mail',
+    value: add
+  }).appendTo(form);
+
+  $('<input>').attr({
+    type: 'hidden',
+    name: 'passwd',
+    value: pas
+  }).appendTo(form);
   
   $('body').append(form);
-  
-  var input = $('input');
-  input.attr('type', 'hidden');
-  input.attr('name', 'address');
-  input.attr('value', add);
-  form.append(input);
-  
-  input.attr('type', 'hidden');
-  input.attr('name', 'passwd');
-  input.attr('value', pas);
-  form.append(input);
-  
-  alert();
   
   form.submit();
   
@@ -51,8 +50,7 @@ function getParam() {
   
   //空のときは前のページに戻るようにする（未実装）
   var params = data.split('&');
-  
-  var result = new Object();
+ 
   for(var i = 0; i < params.length; i++) {
     var element = params[i].split('=');
     var paramName = decodeURIComponent(element[0]);
@@ -62,9 +60,7 @@ function getParam() {
   }
   
   $('#js-address').append(result['add']);
-  $('#js-passwd').append(result['pas']);
-  
-  alert(result['add'] + '\n' + result['pas']);  
+  $('#js-passwd').append(result['pas']); 
 }
 
 function returnPage() {
