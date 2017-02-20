@@ -26,9 +26,13 @@ public class UserLogin extends HttpServlet {
 		boolean result = false;
 		
 		try {
-			String mail = String.valueOf(request.getAttribute("mail") );
-			String passwd = String.valueOf(request.getAttribute("passwd") );
+			String mail = String.valueOf(request.getParameter("address") );
+			String passwd = String.valueOf(request.getParameter("passwd") );
 			String safetyPasswd = PasswordUtil.getSafetyPassword(passwd, "");
+			
+			System.out.println("DEBUDG: " +mail );
+			System.out.println("DEBUDG: " +safetyPasswd);
+			
 			
 			UserDAO dao = new UserDAO();
 			User user = dao.selectByAddressAndPasswd(mail, safetyPasswd);
@@ -43,8 +47,10 @@ public class UserLogin extends HttpServlet {
 		RequestDispatcher dispatcher = null;
 		if(result == true) {
 			dispatcher = request.getRequestDispatcher("index.html");
+			System.out.println("DEBUDG: SACSESS");
 		} else {
 			dispatcher = request.getRequestDispatcher("login.html");
+			System.out.println("DEBUG: FAILSE");
 		}
 		dispatcher.forward(request, response);
 	}
