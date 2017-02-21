@@ -65,6 +65,6 @@ function comp() {
 }
 
 function dateSend(add, passwd) {
-  location.href = 'member_register_confirmation.html?add=' +escape(add)+
+  location.href = 'member_register_confirmation.jsp?add=' +escape(add)+
     '&pas=' +escape(passwd);
 }

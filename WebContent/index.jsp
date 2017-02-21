@@ -18,20 +18,20 @@
     <!-- ヘッダー -->
     <header>
       <div class="header_logo">
-        <h1><img src="logo/try-on3.png" onclick="location.href='index.html'"/></h1>
+        <h1><img src="logo/try-on3.png" onclick="location.href='index.jsp'"/></h1>
       </div>
       <div class="header_nav_wrapper">
         <nav class="hdr_navigation_wrapper_first">
           <div class="header_navigation">
-            <button onclick="location.href='mypage.html'">MYPAGE</button>
-            <button onclick="location.href='sitemap.html'">SITEMAP</button>
-            <button onclick="location.href='inquiry.html'">SUPPORT</button>
+            <button onclick="location.href='mypage.jsp'">MYPAGE</button>
+            <button onclick="location.href='sitemap.jsp'">SITEMAP</button>
+            <button onclick="location.href='inquiry.jsp'">SUPPORT</button>
           </div>
         </nav>
         <nav class="hdr_navigation_wrapper_second">
-          <button class="header_button_serch" onclick="location.href='search.html'"><img src="submit_btn/search.png" /></button>
-          <button class="header_button_useradd" onclick="location.href='member_register.html'"><img src="submit_btn/shinki.png" /></button>
-          <button class="header_button_login" onclick="location.href='login.html'"><img src="submit_btn/login.png" /></button>
+          <button class="header_button_serch" onclick="location.href='search.jsp'"><img src="submit_btn/search.png" /></button>
+          <button class="header_button_useradd" onclick="location.href='member_register.jsp'"><img src="submit_btn/shinki.png" /></button>
+          <button class="header_button_login" onclick="location.href='login.jsp'"><img src="submit_btn/login.png" /></button>
         </nav>
       </div>
     </header>
@@ -94,15 +94,15 @@
       <nav class="ftr_navigation_wrapper_second">
         <h2 class="ftr_title_second">登録・ログイン</h2>
         <ul class="footer_navigation">
-          <li><a href="login.html">ログイン</a></li>
-          <li><a href="member_register.html">新規登録</a></li>
+          <li><a href="login.jsp">ログイン</a></li>
+          <li><a href="member_register.jsp">新規登録</a></li>
         </ul>
       </nav>
       <nav class="ftr_navigation_wrapper_third">
         <h2 class="ftr_title_third">サイトのご利用について</h2>
         <ul class="footer_navigation">
-          <li><a href="sitemap.html">サイトマップ</a></li>
-          <li><a href="inquiry.html">お問合せ</a></li>
+          <li><a href="sitemap.jsp">サイトマップ</a></li>
+          <li><a href="inquiry.jsp">お問合せ</a></li>
         </ul>
       </nav>
       <small class="cpr">Copyright(C)</small>
