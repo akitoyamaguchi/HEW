@@ -64,5 +64,5 @@ function getParam() {
 }
 
 function returnPage() {
-  location.href = 'member_register.html';
+  location.href = 'member_register.jsp';
 }
