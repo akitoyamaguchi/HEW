@@ -38,69 +38,72 @@
 
   <!-- メインコンテンツ -->
   <article class="product_detail_wrapper">
-  <!-- 左カラム -->
-    <section class="left_column_wrapper">
-      <div class="main_pic_wrapper">
-        <p class="main_contents_pic"><img src="img/sample1.jpg" alt="サンプル" /></p>
-      </div>
-      <div class="sub_pic_wrapper">
-        <p class="sub_contents_pic"><img src="img/sample1.jpg" alt="サンプル" /></p>
-        <p class="sub_contents_pic"><img src="img/sample2.jpg" alt="サンプル" /></p>
-        <p class="sub_contents_pic"><img src="img/sample3.jpg" alt="サンプル" /></p>
-        <button class="left_column_btn">COLOR</button>
-        <button class="left_column_btn">3D VIEW</button>
-      </div>
-    </section>
-  <!-- 右カラム -->
-    <section class="right_column_wrapper">
-      <p class="price">PRICE<br /><span>　　￥　</span>5,000</p>
+    <div class="product_detail">
 
-      <button class="wish_list">ほしいものリスト</button>
 
-      <button class="cart_add">カートに入れる</button>
+    <!-- 左カラム -->
+      <section class="left_column_wrapper">
+        <div class="main_pic_wrapper">
+          <p class="main_contents_pic"><img src="img/sample1.jpg" alt="サンプル" /></p>
+        </div>
+        <div class="sub_pic_wrapper">
+          <p class="sub_contents_pic"><img src="img/sample1.jpg" alt="サンプル" /></p>
+          <p class="sub_contents_pic"><img src="img/sample2.jpg" alt="サンプル" /></p>
+          <p class="sub_contents_pic"><img src="img/sample3.jpg" alt="サンプル" /></p>
+          <button class="left_column_btn">COLOR</button>
+          <button class="left_column_btn">3D VIEW</button>
+        </div>
+      </section>
+    <!-- 右カラム -->
+      <section class="right_column_wrapper">
+        <p class="price">PRICE<br /><span>　　￥　</span>5,000</p>
 
-      <button class="try_on"><img src="btn/sityaku.png" /></button>
+        <button class="wish_list">ほしいものリスト</button>
 
-      <button class="buy">購入</button>
+        <button class="cart_add">カートに入れる</button>
 
-    </section>
-  <!-- 商品情報 -->
-    <section class="contents_info_wrapper">
-      <h2 class="contents_info_title">商品情報</h2>
-      <ul class="contents_info">
-        <dl>
-          <dt>商品名</dt>
-          <dd>PL380</dd>
-        </dl>
-        <dl>
-          <dt>品番</dt>
-          <dd>123456789</dd>
-        </dl>
-        <dl>
-          <dt>サイズ</dt>
-          <dd>MIDDLE</dd>
-        </dl>
-        <dl>
-          <dt>性別</dt>
-          <dd>MEN</dd>
-        </dl>
-        <dl>
-          <dt>スタイル</dt>
-          <dd>SQUARE</dd>
-        </dl>
-        <dl>
-          <dt>素材</dt>
-          <dd>CARBON</dd>
-        </dl>
-        <dl>
-          <dt>商品説明</dt>
-          <dd>ああああああああああああああああああああああああああああああああああああああああ<br />
-              いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい<br />
-              うううううううううううううううううううううううううううううううううううううううう</dd>
-        </dl>
-      </ul>
-    </section>
+        <button class="try_on"><img src="btn/sityaku.png" /></button>
 
+        <button class="buy">購入</button>
+
+      </section>
+    <!-- 商品情報 -->
+      <section class="contents_info_wrapper">
+        <h2 class="contents_info_title">商品情報</h2>
+        <ul class="contents_info">
+          <dl>
+            <dt>商品名</dt>
+            <dd>PL380</dd>
+          </dl>
+          <dl>
+            <dt>品番</dt>
+            <dd>123456789</dd>
+          </dl>
+          <dl>
+            <dt>サイズ</dt>
+            <dd>MIDDLE</dd>
+          </dl>
+          <dl>
+            <dt>性別</dt>
+            <dd>MEN</dd>
+          </dl>
+          <dl>
+            <dt>スタイル</dt>
+            <dd>SQUARE</dd>
+          </dl>
+          <dl>
+            <dt>素材</dt>
+            <dd>CARBON</dd>
+          </dl>
+          <dl>
+            <dt>商品説明</dt>
+            <dd>ああああああああああああああああああああああああああああああああああああああああ<br />
+                いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい<br />
+                うううううううううううううううううううううううううううううううううううううううう</dd>
+          </dl>
+        </ul>
+      </section>
+    </div>
   </article>
 
     <!--フッター-->
