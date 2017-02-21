@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class UserAdd
+ * Servlet implementation class UserLogin
  */
-@WebServlet("/UserAdd")
-public class UserAdd extends HttpServlet {
+@WebServlet("/UserLogin")
+public class UserLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -26,30 +26,33 @@ public class UserAdd extends HttpServlet {
 		boolean result = false;
 		
 		try {
-			String mail = String.valueOf(request.getParameter("mail") );
+			String mail = String.valueOf(request.getParameter("address") );
 			String passwd = String.valueOf(request.getParameter("passwd") );
 			String safetyPasswd = PasswordUtil.getSafetyPassword(passwd, "");
 			
+			System.out.println("DEBUDG: " +mail );
+			System.out.println("DEBUDG: " +safetyPasswd);
+			
 			
 			UserDAO dao = new UserDAO();
-			User user = new User(mail, safetyPasswd, true);
-			result = dao.insert(user);
+			User user = dao.selectByAddressAndPasswd(mail, safetyPasswd);
+			if(user != null) {
+				result = true;
+			}
 		}catch (ClassNotFoundException e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
 		
-		String url;
-		if(result) {
-			url = "/member_register_complete.html";
-
+		RequestDispatcher dispatcher = null;
+		if(result == true) {
+			dispatcher = request.getRequestDispatcher("index.html");
+			System.out.println("DEBUDG: SACSESS");
 		} else {
-			//エラーページ未実装
-			url = "/index.html";
-			System.out.println("デバッグ用：ユーザ登録に失敗しました。");
+			dispatcher = request.getRequestDispatcher("login.html");
+			System.out.println("DEBUG: FAILSE");
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-		dispatcher.forward(request, response);		
+		dispatcher.forward(request, response);
 	}
 
 }

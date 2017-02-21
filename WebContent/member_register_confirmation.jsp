@@ -4,13 +4,15 @@
 <meta charset="utf-8">
 <meta name="google" value="notranslate">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>会員登録完了画面</title>
+<title>会員登録確認画面</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/input.css" rel="stylesheet" type="text/css">
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
-<link href="css/result.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-
 </style>
+
+<script type="text/javascript" src="js/lib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/MemberRegisterConfirmation.js"></script>
 
 </head>
 <body>
@@ -19,7 +21,7 @@
     <!-- ヘッダー //共通項目-->
     <header>
       <div class="header_logo">
-        <h1><img src="logo/try-on.png" onclick="location.href='index.html'"/></h1>
+        <h1><img src="logo/try-on3.png" onclick="location.href='index.html'"/></h1>
       </div>
       <div class="header_nav_wrapper">
         <nav class="hdr_navigation_wrapper_first">
@@ -30,22 +32,41 @@
           </div>
         </nav>
         <nav class="hdr_navigation_wrapper_second">
-          <button class="header_button_serch" onclick="location.href='search.html'"><img src="100/search.png" /></button>
-          <button class="header_button_useradd" onclick="location.href='member_register.html'"><img src="100/shinki.png" /></button>
-          <button class="header_button_login" onclick="location.href='login.html'"><img src="100/login.png" /></button>
+          <button class="header_button_serch" onclick="location.href='search.html'"><img src="submit_btn/search.png" /></button>
+          <button class="header_button_useradd" onclick="location.href='member_register.html'"><img src="submit_btn/shinki.png" /></button>
+          <button class="header_button_login" onclick="location.href='login.html'"><img src="submit_btn/login.png" /></button>
         </nav>
       </div>
     </header>
 
   <!-- メインコンテンツ -->
-    <article class="member_register_wrapper">
-      <h2 class="m_r_title">登録が完了しました。</h2>
+<!-- <div class="overall_wrapper"> -->
 
 
-      <section class="btn_confirmation">
-        <a href="index.html"><img src="btn/kanryou.png" /></a>
-      </section>
-    </article>
+  <article class="member_register_confirmation_wrapper">
+    <section class="member_register_confirmation">
+      <h1 class="m_r_title">登録情報の確認</h2>
+        <div class="form_wrapper">
+          <dl>
+            <dt>メールアドレス</dt>
+              <dd id="js-address">
+
+              </dd>
+          </dl>
+          <dl>
+            <dt>パスワード</dt>
+              <dd id="js-passwd">
+
+              </dd>
+          </dl>
+        </div>
+        <div class="btn_confirmation2">
+            <input type="submit" name="act1" value="" class="modoru">
+            <input type="submit" name="act2" value="" class="kanryou">
+        </div>
+    </section>
+
+  </article>
 
     <!--フッター　//共通項目-->
     <footer>

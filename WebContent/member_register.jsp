@@ -3,14 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="google" value="notranslate">
-<title>ログイン画面</title>
+<title>会員登録画面</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
-<link href="css/login.css" rel="stylesheet" type="text/css">
+<link href="css/input.css" rel="stylesheet" type="text/css">
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
 
 <style type="text/css">
 
 </style>
+<script type="text/javascript" src="js/lib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/MemberRegister.js"></script>
 </head>
 <body>
   <!-- 全体ラッパー -->
@@ -37,15 +39,22 @@
     </header>
 
   <!-- メインコンテンツ -->
-    <article class="login_wrapper">
-      <section class="left_column_wrapper">
-        <h2 class="m_r_title">既に会員登録されているお客様</h2>
-        <form action="member_register_confirmation" method="post">
-          <div class="form_wrapper">
+    <article class="member_register_wrapper">
+      <section class="member_register">
+
+        <h1 class="m_r_title">会員登録</h2>
+        <div class="form_wrapper">
+          <form action="#" method="post">
             <dl>
               <dt>メールアドレス</dt>
                 <dd>
                   <input type="email" size="40" placeholder="メールアドレスを入力" name="address" />
+                </dd>
+            </dl>
+            <dl>
+              <dt>メールアドレス確認</dt>
+                <dd>
+                  <input type="email" size="40" placeholder="再度メールアドレスを入力" name="address_con" />
                 </dd>
             </dl>
             <dl>
@@ -54,29 +63,21 @@
                   <input type="password" size="40" placeholder="パスワードを入力" name="passwd" />
                 </dd>
             </dl>
+            <dl>
+              <dt>パスワード確認</dt>
+                <dd>
+                  <input type="password" size="40" placeholder="再度パスワードを入力" name="passwd_con" />
+                </dd>
+            </dl>
+            <div class="btn_confirmation">
+                  <input type="submit" name="act" value="" class="kakunin">
+            </div>
+          </form>
+        </div><!--form_wrapper終了-->
 
-          </div>
-          <div class="btn_confirmation">
-              <input type="submit" name="act1" value="" class="login">
-          </div>
-        </form>
-      </section>
 
-      <section class="right_column_wrapper">
-        <h2 class="m_r_title">新規会員登録をされるお客様</h2>
-          <div class="form_wrapper">
-            <p>初めてご利用になるお客様は「新規会員登録」</br>ボタンをクリックし、会員登録を行ってください。</p>
-          </div>
-          <div class="btn_confirmation2">
-              <button class="new_add" onclick="location.href='member_register.html'"></button>
-          </div>
-        </form>
       </section>
     </article>
-
-
-
-
     <!--フッター　//共通項目-->
     <footer>
       <nav class="ftr_navigation_wrapper_first">
@@ -90,15 +91,15 @@
       <nav class="ftr_navigation_wrapper_second">
         <h2 class="ftr_title_second">登録・ログイン</h2>
         <ul class="footer_navigation">
-          <li><a href="#">ログイン</a></li>
-          <li><a href="#">新規登録</a></li>
+          <li><a href="login.html">ログイン</a></li>
+          <li><a href="member_register.html">新規登録</a></li>
         </ul>
       </nav>
       <nav class="ftr_navigation_wrapper_third">
         <h2 class="ftr_title_third">サイトのご利用について</h2>
         <ul class="footer_navigation">
-          <li><a href="#">サイトマップ</a></li>
-          <li><a href="#">お問合せ</a></li>
+          <li><a href="sitemap.html">サイトマップ</a></li>
+          <li><a href="inquiry.html">お問合せ</a></li>
         </ul>
       </nav>
       <small class="cpr">Copyright(C)</small>
