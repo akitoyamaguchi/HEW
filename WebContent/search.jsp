@@ -78,9 +78,9 @@
             <dl>
               <dt>金額</dt>
                 <dd class="deadline_select">
-                  <input type="text" size="40" placeholder="金額を入力" name="low_price" pattern="^[0-9]+$" title="※数字のみ入力できます"/>
+                  <input type="text" size="40" placeholder="金額の最低値を入力" name="low_price" pattern="^[0-9]+$" title="※数字のみ入力できます"/>
                   <label>～</label>
-                  <input type="text" size="40" placeholder="金額を入力" name="high_price" pattern="^[0-9]+$" title="※数字のみ入力できます"/>
+                  <input type="text" size="40" placeholder="金額の最大値を入力" name="high_price" pattern="^[0-9]+$" title="※数字のみ入力できます"/>
                 </dd>
             </dl>
             <input type="radio" name="credit" id="1st" value="1"  checked/><label for="1st">商品ランキング</label>
