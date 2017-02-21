@@ -16,6 +16,6 @@ public class Log extends Debug {
 	}
 	
 	public static void d(String tag, String mes) {
-		System.out.println(tag + " : " + "mes");
+		System.out.println(tag + " : " + mes);
 	}
 }

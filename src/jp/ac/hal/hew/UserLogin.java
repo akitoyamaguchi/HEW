@@ -49,7 +49,7 @@ public class UserLogin extends HttpServlet {
 		
 		RequestDispatcher dispatcher = null;
 		if(result == true) {
-			dispatcher = request.getRequestDispatcher("index.html");
+			dispatcher = request.getRequestDispatcher("index.jsp");
 			
 			// セッションにログイン状態保存
 			HttpSession session = request.getSession();
@@ -57,7 +57,7 @@ public class UserLogin extends HttpServlet {
 			
 			Log.d("LOGIN", "SACSESS");
 		} else {
-			dispatcher = request.getRequestDispatcher("login.html");
+			dispatcher = request.getRequestDispatcher("login.jsp");
 			
 			Log.d("LOGIN", "FAILD");
 		}
