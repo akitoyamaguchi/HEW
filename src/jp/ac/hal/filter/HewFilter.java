@@ -16,6 +16,7 @@ import org.apache.catalina.connector.Request;
 import jp.ac.hal.debug.Log;
 
 public class HewFilter implements Filter {
+	private String encoding;
 	
 	@Override
 	public void destroy() {
@@ -27,7 +28,7 @@ public class HewFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		// TODO 自動生成されたメソッド・スタブ
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding(encoding);
 		
 		HttpSession session = ((HttpServletRequest) request).getSession(false);
 
@@ -52,6 +53,7 @@ public class HewFilter implements Filter {
 	@Override
 	public void init(FilterConfig config) throws ServletException {
 		// TODO 自動生成されたメソッド・スタブ
+		encoding = config.getInitParameter("encoding");
 
 	}
 
