@@ -41,7 +41,7 @@ public class UserAdd extends HttpServlet {
 		
 		String url;
 		if(result) {
-			url = "/member_register_complete.html";
+			url = "/member_register_complete.jsp";
 
 		} else {
 			//エラーページ未実装

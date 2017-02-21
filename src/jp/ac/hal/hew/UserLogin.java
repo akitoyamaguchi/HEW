@@ -8,6 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import jp.ac.hal.debug.Log;
 
 /**
  * Servlet implementation class UserLogin
@@ -46,11 +49,17 @@ public class UserLogin extends HttpServlet {
 		
 		RequestDispatcher dispatcher = null;
 		if(result == true) {
-			dispatcher = request.getRequestDispatcher("index.html");
-			System.out.println("DEBUDG: SACSESS");
+			dispatcher = request.getRequestDispatcher("index.jsp");
+			
+			// セッションにログイン状態保存
+			HttpSession session = request.getSession();
+			session.setAttribute("isLogin", true);
+			
+			Log.d("LOGIN", "SACSESS");
 		} else {
-			dispatcher = request.getRequestDispatcher("login.html");
-			System.out.println("DEBUG: FAILSE");
+			dispatcher = request.getRequestDispatcher("login.jsp");
+			
+			Log.d("LOGIN", "FAILD");
 		}
 		dispatcher.forward(request, response);
 	}

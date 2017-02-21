@@ -1,6 +1,6 @@
 package jp.ac.hal.debug;
 
-public class GeneralDebug extends Debug {
+public class Log extends Debug {
 	public static void ExceptionDebug(Exception e) {
 		System.out.println(sep);
 		System.out.println(e.getMessage() );
@@ -13,5 +13,9 @@ public class GeneralDebug extends Debug {
 		System.out.println(cnfe.getMessage() );
 		System.out.println(cnfe.getStackTrace() );
 		System.out.println(sep);
+	}
+	
+	public static void d(String tag, String mes) {
+		System.out.println(tag + " : " + mes);
 	}
 }
