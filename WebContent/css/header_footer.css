@@ -18,6 +18,7 @@ header {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	width: 100vw;
+	max-width: 1920px;
 	min-width: 1080px;
 	height: 15vh;
 	min-height: 120px;
@@ -27,6 +28,7 @@ header {
 }
 .header_logo {
 	width: auto;
+	min-width: 300px;
 	height: 100px;
 }
 .header_logo img{
@@ -40,17 +42,16 @@ header {
 
 /* ヘッダーナビゲーション */
 .header_nav_wrapper{
-		width: 75vw;
-		min-width: 880px;
+		width: 70vw;
+		min-width: 780px;
 		height: auto;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
 }
 .hdr_navigation_wrapper_first {
-	width: 75vw;
-	max-width: 100%;
-	min-width: 880px;
+	width: auto;
+	min-width: 780px;
 	height: 7vh;
 	min-height: 55px;
 	background-color: #525c6e;
@@ -73,9 +74,8 @@ header {
 }
 
 .hdr_navigation_wrapper_second {
-	width: 75vw;
-	max-width: 100%;
-	min-width: 880px;
+	width: 70vw;
+	min-width: 780px;
 	height: 8vh;
 	min-height: 65px;
 	background-color: #525c6e;

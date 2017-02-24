@@ -1,17 +1,20 @@
 
 /*全体ラッパー*/
 .product_detail_wrapper{
-	width: 100vw;
+	max-width: 1920px;
 	min-width: 1080px;
-	height: 70vh;
-	max-height: 100vh;
-	min-height: 1080px;
+	height: auto;
 	margin: 0 auto;
+	background-color: #eee;
+}
+
+.product_detail{
+	width: auto;
+	height: auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-content: flex-start;
-	background-color: #eee;
 }
 
 
@@ -21,7 +24,7 @@
 	order: 1;
 	width: 60vw;
 	min-width: 648px;
-	height: 40vh;
+	height: 650px;
 	min-height: 650px;
 	background-color: #eee;
 	display: flex;
@@ -95,7 +98,7 @@
 	order: 2;
 	width: 40vw;
 	min-width: 432px;
-	height: 40vh;
+	height: 650px;
 	min-height: 650px;
 	background-color: #eee;
 	display: flex;
@@ -160,8 +163,9 @@
 	order: 3;
 	width: 100vw;
 	min-width: 1080px;
-	height: 30vh;
-	min-height: 430px;
+	height: 450px;
+	min-height: 450px;
+	/*padding: 5px 0 10px 20px;*/
 	background: linear-gradient(-45deg, rgba(240, 240, 240, .9), rgba(250, 200, 200, .9));
 
 }
@@ -169,7 +173,7 @@
 	font-size: 26px;
 	font-weight: bold;
 	font-weight: 200;
-	padding: 5px 0;
+	padding: 5px 20px;
 	border-bottom: solid 1px #eee;
 }
 .contents_info{
@@ -182,7 +186,7 @@
 }
 dl{
 	border-bottom: solid 1px #eee;
-	padding: 15px 0;
+	padding: 15px 20px;
 	margin: 0;
 }
 dt,dd{
