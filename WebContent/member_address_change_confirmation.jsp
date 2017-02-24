@@ -1,20 +1,23 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="google" value="notranslate">
-<title>top画面</title>
+<title>メールアドレス変更確認画面</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
-<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/input.css" rel="stylesheet" type="text/css">
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
+
 <style type="text/css">
 
 </style>
+<script type="text/javascript" src="js/lib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/MemberRegister.js"></script>
 </head>
 <body>
   <!-- 全体ラッパー -->
-  <div class="wrapper">
-    <!-- ヘッダー -->
+<div class="wrapper">
+    <!-- ヘッダー //共通項目-->
     <header>
       <div class="header_logo">
         <h1><img src="logo/try-on3.png" onclick="location.href='index.jsp'"/></h1>
@@ -36,51 +39,28 @@
     </header>
 
   <!-- メインコンテンツ -->
-  <article class="index_wrapper">
-    <!-- 左カラム -->
-    <section class="left_column_wrapper">
-      <nav>
-        <ul class="left_navigation">
-          <li class="left_navigation_li">メガネ</li>
-          <li class="left_navigation_li">サングラス</li>
-          <li class="left_navigation_li">アイウェア</li>
-        </ul>
-      </nav>
-    </section>
-    <!-- 中央カラム -->
-    <section class="main_column">
-      <h1 class="main_visual"><img src="img/a.png" alt="メインビジュアル" /></h1>
-    </section>
-    <!-- 右カラム -->
-    <section class="right_column_wrapper">
-      <nav>
-        <ul class="right_navigation">
-          <h2 class="right_column_title">RANKING</h2>
-          <li class="right_navigation_li"><img src="img/sample2.jpg" alt="サンプル" />
-          <p><span>1st</span><br />商品名<br />価格</p></li>
-          <li class="right_navigation_li"><img src="img/sample2.jpg" alt="サンプル" />
-          <p><span>2nd</span><br />商品名<br />価格</p></li>
-          <li class="right_navigation_li"><img src="img/sample2.jpg" alt="サンプル" />
-          <p><span>3rd</span><br />商品名<br />価格</p></li>
-        </ul>
-      </nav>
-    </section>
-    <!-- 新商品 -->
-    <section class="new_contents_wrapper">
-      <h2 class="new_contents_title">NEW</h2>
-      <!-- <hr class="new_contents_hr_bottom"> -->
-      <ul class="new_contents">
-        <li><img src="img/sample2.jpg" alt="サンプル" /><p>商品名<br />価格</p></li>
-        <li><img src="img/sample2.jpg" alt="サンプル" /><p>商品名<br />価格</p></li>
-        <li><img src="img/sample2.jpg" alt="サンプル" /><p>商品名<br />価格</p></li>
-        <li><img src="img/sample2.jpg" alt="サンプル" /><p>商品名<br />価格</p></li>
-      </ul>
-      <!-- <hr class="new_contents_hr_bottom"> -->
-    </section>
-  </article>
+    <article class="member_information_change_wrapper">
+      <section class="member_change">
+
+        <h1 class="m_r_title">メールアドレス変更の確認</h1>
+        <h2>以下の内容でよろしければ、「完了」をクリックして下さい。</h2>
+        <div class="form_wrapper">
+            <dl>
+              <dt>メールアドレス</dt>
+                <dd>
+                  あｓｄｆｇｈｊｋ
+                </dd>
+            </dl>
+            <div class="btn_confirmation">
+                  <input type="submit" name="act1" value="" class="modoru">
+                  <input type="submit" name="act2" value="" class="kanryou">
+            </div>
+        </div><!--form_wrapper終了-->
 
 
-    <!--フッター-->
+      </section>
+    </article>
+    <!--フッター　//共通項目-->
     <footer>
       <nav class="ftr_navigation_wrapper_first">
         <h2 class="ftr_title_first">取扱商品</h2>
@@ -106,7 +86,7 @@
       </nav>
       <small class="cpr">Copyright(C)</small>
     </footer>
-  </div>
+</div>
 
 </body>
 </html>
