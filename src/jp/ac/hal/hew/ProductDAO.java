@@ -64,7 +64,8 @@ public class ProductDAO extends CommonDAO {
                                 rs.getInt("frame_color"),
                                 rs.getInt("lens_color"),
                                 rs.getInt("lens_type"),
-                                rs.getString("size"));
+                                rs.getString("size"),
+                                rs.getString("main_image"));
                     }
                 }
             }finally {
@@ -98,7 +99,8 @@ public class ProductDAO extends CommonDAO {
                             rs.getInt("frame_color"),
                             rs.getInt("lens_color"),
                             rs.getInt("lens_type"),
-                            rs.getString("size")));
+                            rs.getString("size"),
+                            rs.getString("main_image")));
                 }
             }finally {
                 super.close();

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>HEW</display-name>
-  
   <filter>
     <filter-name>HewFilter</filter-name>
     <filter-class>jp.ac.hal.filter.HewFilter</filter-class>
@@ -11,29 +10,25 @@
     </init-param>
   </filter>
   <filter>
-  	<filter-name>LoginedFilter</filter-name>
-  	<filter-class>jp.ac.hal.filter.LoginedFilter</filter-class>
+    <filter-name>LoginedFilter</filter-name>
+    <filter-class>jp.ac.hal.filter.LoginedFilter</filter-class>
   </filter>
-  
   <filter-mapping>
     <filter-name>HewFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   <filter-mapping>
-  	<filter-name>LoginedFilter</filter-name>
-  	<url-pattern>/mypage.jsp</url-pattern>
+    <filter-name>LoginedFilter</filter-name>
+    <url-pattern>/mypage.jsp</url-pattern>
   </filter-mapping>
   <filter-mapping>
-  	<filter-name>LoginedFilter</filter-name>
-  	<url-pattern>/member_buy.jsp</url-pattern>
+    <filter-name>LoginedFilter</filter-name>
+    <url-pattern>/member_buy.jsp</url-pattern>
   </filter-mapping>
   <filter-mapping>
-  	<filter-name>LoginedFilter</filter-name>
-  	<url-pattern>/member_address_change_confirmation.jsp</url-pattern>
+    <filter-name>LoginedFilter</filter-name>
+    <url-pattern>/member_address_change_confirmation.jsp</url-pattern>
   </filter-mapping>
-  
-  
-  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>index.jsp</welcome-file>
