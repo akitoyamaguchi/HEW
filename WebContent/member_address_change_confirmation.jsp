@@ -1,3 +1,5 @@
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +19,7 @@
 <body>
   <!-- 全体ラッパー -->
 <div class="wrapper">
-    <!-- ヘッダー //共通項目-->
+    <!-- ヘッダー //共通項目 -->
 <%@ include file="header.jsp" %>
 
   <!-- メインコンテンツ -->
@@ -30,7 +32,7 @@
             <dl>
               <dt>メールアドレス</dt>
                 <dd>
-                  あｓｄｆｇｈｊｋ
+                  あｑｗせｄｒｆｇｔｙｈ
                 </dd>
             </dl>
             <div class="btn_confirmation">

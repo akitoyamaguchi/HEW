@@ -1,3 +1,5 @@
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,19 +28,19 @@
     <!-- 左カラム -->
       <section class="left_column_wrapper">
         <div class="main_pic_wrapper">
-          <p class="main_contents_pic"><img src="img/sample1.jpg" alt="サンプル" /></p>
+          <p class="main_contents_pic"><img src="img/sample1.jpg" alt="????????????" /></p>
         </div>
         <div class="sub_pic_wrapper">
-          <p class="sub_contents_pic"><img src="img/sample1.jpg" alt="サンプル" /></p>
-          <p class="sub_contents_pic"><img src="img/sample2.jpg" alt="サンプル" /></p>
-          <p class="sub_contents_pic"><img src="img/sample3.jpg" alt="サンプル" /></p>
+          <p class="sub_contents_pic"><img src="img/sample1.jpg" alt="????????????" /></p>
+          <p class="sub_contents_pic"><img src="img/sample2.jpg" alt="????????????" /></p>
+          <p class="sub_contents_pic"><img src="img/sample3.jpg" alt="????????????" /></p>
           <button class="left_column_btn">COLOR</button>
           <button class="left_column_btn">3D VIEW</button>
         </div>
       </section>
     <!-- 右カラム -->
       <section class="right_column_wrapper">
-        <p class="price">PRICE<br /><span>　　￥　</span>5,000</p>
+        <p class="price">PRICE<br /><span>￥</span>5,000</p>
 
         <button class="wish_list">ほしいものリスト</button>
 
@@ -51,7 +53,7 @@
       </section>
     <!-- 商品情報 -->
       <section class="contents_info_wrapper">
-        <h2 class="contents_info_title">商品情報</h2>
+        <h2 class="contents_info_title">???????????±</h2>
         <ul class="contents_info">
           <dl>
             <dt>商品名</dt>
@@ -79,9 +81,12 @@
           </dl>
           <dl>
             <dt>商品説明</dt>
-            <dd>ああああああああああああああああああああああああああああああああああああああああ<br />
-                いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい<br />
-                うううううううううううううううううううううううううううううううううううううううう</dd>
+            <dd>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテスト</dd>
           </dl>
         </ul>
       </section>
