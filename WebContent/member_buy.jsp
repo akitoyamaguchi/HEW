@@ -68,11 +68,7 @@
         <button class="use_shipping">この住所を使う</button>
       </div>
     </section>
-
-
   </article>
-
-
     <!--フッター-->
 <%@ include file="footer.jsp" %>
   </div>

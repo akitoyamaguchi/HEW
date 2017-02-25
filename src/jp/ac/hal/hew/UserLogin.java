@@ -18,6 +18,8 @@ import jp.ac.hal.debug.Log;
 @WebServlet("/UserLogin")
 public class UserLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private String mail;
+	private String passwd;
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -28,8 +30,8 @@ public class UserLogin extends HttpServlet {
 		boolean result = false;
 		
 		try {
-			String mail = String.valueOf(request.getParameter("address") );
-			String passwd = String.valueOf(request.getParameter("passwd") );
+			mail = String.valueOf(request.getParameter("address") );
+			passwd = String.valueOf(request.getParameter("passwd") );
 			String safetyPasswd = PasswordUtil.getSafetyPassword(passwd, "");
 			
 			System.out.println("DEBUDG: " +mail );
@@ -47,15 +49,18 @@ public class UserLogin extends HttpServlet {
 		}
 		
 		RequestDispatcher dispatcher = null;
+		HttpSession session = request.getSession();
 		if(result == true) {
 			dispatcher = request.getRequestDispatcher("index.jsp");
 			
 			// セッションにログイン状態保存
-			HttpSession session = request.getSession();
-			session.setAttribute("isLogin", true);
+			session.setAttribute("isLogin", result);
+			session.setAttribute("mail", mail);
+			session.setAttribute("pass", passwd);
 			
 			Log.d("LOGIN", "SACSESS");
 		} else {
+			session.setAttribute("isLogin", result);
 			dispatcher = request.getRequestDispatcher("login.jsp");
 			
 			Log.d("LOGIN", "FAILD");

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -46,7 +48,7 @@
       <section class="item_box flex_row general_shipment">
         <p>発送先関連</p>
         <div class="flex_column">
-          <a href="#">発送先登録・変更・削除</a>
+          <a href="member_buy">発送先登録・変更・削除</a>
         </div>
       </section>
       </div>
