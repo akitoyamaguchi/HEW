@@ -1,3 +1,5 @@
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,25 +18,7 @@
   <!-- 全体ラッパー -->
   <div class="wrapper">
     <!-- ヘッダー -->
-    <header>
-      <div class="header_logo">
-        <h1><img src="logo/try-on3.png" onclick="location.href='index.jsp'"/></h1>
-      </div>
-      <div class="header_nav_wrapper">
-        <nav class="hdr_navigation_wrapper_first">
-          <div class="header_navigation">
-            <button onclick="location.href='mypage.jsp'">MYPAGE</button>
-            <button onclick="location.href='sitemap.jsp'">SITEMAP</button>
-            <button onclick="location.href='inquiry.jsp'">SUPPORT</button>
-          </div>
-        </nav>
-        <nav class="hdr_navigation_wrapper_second">
-          <button class="header_button_serch" onclick="location.href='search.jsp'"><img src="submit_btn/search.png" /></button>
-          <button class="header_button_useradd" onclick="location.href='member_register.jsp'"><img src="submit_btn/shinki.png" /></button>
-          <button class="header_button_login" onclick="location.href='login.jsp'"><img src="submit_btn/login.png" /></button>
-        </nav>
-      </div>
-    </header>
+<%@ include file="header.jsp" %>
 
   <!-- メインコンテンツ -->
   <article class="product_detail_wrapper">
@@ -44,19 +28,19 @@
     <!-- 左カラム -->
       <section class="left_column_wrapper">
         <div class="main_pic_wrapper">
-          <p class="main_contents_pic"><img src="img/sample1.jpg" alt="サンプル" /></p>
+          <p class="main_contents_pic"><img src="img/sample1.jpg" alt="????????????" /></p>
         </div>
         <div class="sub_pic_wrapper">
-          <p class="sub_contents_pic"><img src="img/sample1.jpg" alt="サンプル" /></p>
-          <p class="sub_contents_pic"><img src="img/sample2.jpg" alt="サンプル" /></p>
-          <p class="sub_contents_pic"><img src="img/sample3.jpg" alt="サンプル" /></p>
+          <p class="sub_contents_pic"><img src="img/sample1.jpg" alt="????????????" /></p>
+          <p class="sub_contents_pic"><img src="img/sample2.jpg" alt="????????????" /></p>
+          <p class="sub_contents_pic"><img src="img/sample3.jpg" alt="????????????" /></p>
           <button class="left_column_btn">COLOR</button>
           <button class="left_column_btn">3D VIEW</button>
         </div>
       </section>
     <!-- 右カラム -->
       <section class="right_column_wrapper">
-        <p class="price">PRICE<br /><span>　　￥　</span>5,000</p>
+        <p class="price">PRICE<br /><span>￥</span>5,000</p>
 
         <button class="wish_list">ほしいものリスト</button>
 
@@ -69,7 +53,7 @@
       </section>
     <!-- 商品情報 -->
       <section class="contents_info_wrapper">
-        <h2 class="contents_info_title">商品情報</h2>
+        <h2 class="contents_info_title">???????????±</h2>
         <ul class="contents_info">
           <dl>
             <dt>商品名</dt>
@@ -97,41 +81,19 @@
           </dl>
           <dl>
             <dt>商品説明</dt>
-            <dd>ああああああああああああああああああああああああああああああああああああああああ<br />
-                いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい<br />
-                うううううううううううううううううううううううううううううううううううううううう</dd>
+            <dd>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+            テストテストテストテストテストテストテストテストテストテストテスト</dd>
           </dl>
         </ul>
       </section>
     </div>
   </article>
 
-    <!--フッター-->
-    <footer>
-      <nav class="ftr_navigation_wrapper_first">
-        <h2 class="ftr_title_first">取扱商品</h2>
-        <ul class="footer_navigation">
-          <li><a href="#">メガネ</a></li>
-          <li><a href="#">サングラス</a></li>
-          <li><a href="#">アイウェア</a></li>
-        </ul>
-      </nav>
-      <nav class="ftr_navigation_wrapper_second">
-        <h2 class="ftr_title_second">登録・ログイン</h2>
-        <ul class="footer_navigation">
-          <li><a href="#">ログイン</a></li>
-          <li><a href="#">新規登録</a></li>
-        </ul>
-      </nav>
-      <nav class="ftr_navigation_wrapper_third">
-        <h2 class="ftr_title_third">サイトのご利用について</h2>
-        <ul class="footer_navigation">
-          <li><a href="#">サイトマップ</a></li>
-          <li><a href="#">お問合せ</a></li>
-        </ul>
-      </nav>
-      <small class="cpr">Copyright(C)</small>
-    </footer>
+<%@ include file="footer.jsp" %>
   </div>
 
 </body>
