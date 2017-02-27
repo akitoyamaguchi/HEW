@@ -16,10 +16,11 @@ public class Product {
     private int lensColor;
     private int lensType;
     private String size;
+    private String mainImage;
 
     public Product(int id, String name, String detail, int maker, int category,
                    String releaseOn, int price, String modelPath,
-                   int frameColor, int lensColor, int lensType, String size) {
+                   int frameColor, int lensColor, int lensType, String size, String mainImage) {
         this.id = id;
         this.name = name;
         this.detail = detail;
@@ -32,12 +33,13 @@ public class Product {
         this.lensColor = lensColor;
         this.lensType = lensType;
         this.size = size;
+        this.mainImage = mainImage;
     }
 
     public Product(String name, String detail, int maker, int category,
                    String releaseOn, int price, String modelPath,
                    int frameColor, int lensColor, int lensType,
-                   String size) {
+                   String size, String mainImage) {
         this.name = name;
         this.detail = detail;
         this.maker = maker;
@@ -49,6 +51,7 @@ public class Product {
         this.lensColor = lensColor;
         this.lensType = lensType;
         this.size = size;
+        this.mainImage = mainImage;
     }
 
     public int getId() {
@@ -123,4 +126,13 @@ public class Product {
     public void setSize(String size) {
         this.size = size;
     }
+
+	public String getMainImage() {
+		return mainImage;
+	}
+
+	public void setMainImage(String mainImage) {
+		this.mainImage = mainImage;
+	}
+    
 }
