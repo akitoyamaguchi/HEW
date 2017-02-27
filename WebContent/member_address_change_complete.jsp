@@ -4,15 +4,13 @@
 <meta charset="utf-8">
 <meta name="google" value="notranslate">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>会員登録確認画面</title>
+<title> メールアドレス変更完了画面</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
-<link href="css/input.css" rel="stylesheet" type="text/css">
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
+<link href="css/complete.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-</style>
 
-<script type="text/javascript" src="js/lib/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="js/MemberRegisterConfirmation.js"></script>
+</style>
 
 </head>
 <body>
@@ -40,33 +38,14 @@
     </header>
 
   <!-- メインコンテンツ -->
-<!-- <div class="overall_wrapper"> -->
+    <article class="member_register_wrapper">
+      <h1 class="m_r_title">メールアドレスの変更が完了しました。</h2>
 
 
-  <article class="member_register_confirmation_wrapper">
-    <section class="member_register_confirmation">
-      <h1 class="m_r_title">登録情報の確認</h2>
-        <div class="form_wrapper">
-          <dl>
-            <dt>メールアドレス</dt>
-              <dd id="js-address">
-
-              </dd>
-          </dl>
-          <dl>
-            <dt>パスワード</dt>
-              <dd id="js-passwd">
-
-              </dd>
-          </dl>
-        </div>
-    </section>
-    <div class="btn_confirmation2">
-      <button onclick="location.href='#'"><img src="submit_btn/modoru.png"></button>
-      <button onclick="location.href='#'"><img src="submit_btn/kanryou.png"></button>
-    </div>
-
-  </article>
+      <section class="btn_confirmation">
+        <button onclick="location.href='index.jsp'"><img src="btn/kanryou.png" /></button>
+      </section>
+    </article>
 
     <!--フッター　//共通項目-->
     <footer>

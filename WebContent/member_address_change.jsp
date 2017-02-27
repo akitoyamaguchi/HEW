@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="google" value="notranslate">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>会員登録確認画面</title>
+<title>メールアドレス変更画面</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
 <link href="css/input.css" rel="stylesheet" type="text/css">
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
+
 <style type="text/css">
+
 </style>
-
 <script type="text/javascript" src="js/lib/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="js/MemberRegisterConfirmation.js"></script>
-
+<script type="text/javascript" src="js/MemberRegister.js"></script>
 </head>
 <body>
   <!-- 全体ラッパー -->
@@ -40,34 +39,33 @@
     </header>
 
   <!-- メインコンテンツ -->
-<!-- <div class="overall_wrapper"> -->
+    <article class="member_information_change_wrapper">
+      <section class="member_change">
 
-
-  <article class="member_register_confirmation_wrapper">
-    <section class="member_register_confirmation">
-      <h1 class="m_r_title">登録情報の確認</h2>
+        <h1 class="m_r_title">メールアドレス変更</h1>
         <div class="form_wrapper">
-          <dl>
-            <dt>メールアドレス</dt>
-              <dd id="js-address">
+          <form action="#" method="post">
+            <dl>
+              <dt>メールアドレス</dt>
+                <dd>
+                  <input type="email" size="40" placeholder="メールアドレスを入力" name="address" />
+                </dd>
+            </dl>
+            <dl>
+              <dt>メールアドレス確認</dt>
+                <dd>
+                  <input type="email" size="40" placeholder="再度メールアドレスを入力" name="address_con" />
+                </dd>
+            </dl>
+            <div class="btn_confirmation">
+                  <input type="submit" name="act" value="" class="kakunin">
+            </div>
+          </form>
+        </div><!--form_wrapper終了-->
 
-              </dd>
-          </dl>
-          <dl>
-            <dt>パスワード</dt>
-              <dd id="js-passwd">
 
-              </dd>
-          </dl>
-        </div>
-    </section>
-    <div class="btn_confirmation2">
-      <button onclick="location.href='#'"><img src="submit_btn/modoru.png"></button>
-      <button onclick="location.href='#'"><img src="submit_btn/kanryou.png"></button>
-    </div>
-
-  </article>
-
+      </section>
+    </article>
     <!--フッター　//共通項目-->
     <footer>
       <nav class="ftr_navigation_wrapper_first">
@@ -81,15 +79,15 @@
       <nav class="ftr_navigation_wrapper_second">
         <h2 class="ftr_title_second">登録・ログイン</h2>
         <ul class="footer_navigation">
-          <li><a href="#">ログイン</a></li>
-          <li><a href="#">新規登録</a></li>
+          <li><a href="login.jsp">ログイン</a></li>
+          <li><a href="member_register.jsp">新規登録</a></li>
         </ul>
       </nav>
       <nav class="ftr_navigation_wrapper_third">
         <h2 class="ftr_title_third">サイトのご利用について</h2>
         <ul class="footer_navigation">
-          <li><a href="#">サイトマップ</a></li>
-          <li><a href="#">お問合せ</a></li>
+          <li><a href="sitemap.jsp">サイトマップ</a></li>
+          <li><a href="inquiry.jsp">お問合せ</a></li>
         </ul>
       </nav>
       <small class="cpr">Copyright(C)</small>
