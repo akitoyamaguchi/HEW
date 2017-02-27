@@ -46,8 +46,8 @@
         </div>
     </section>
     <div class="btn_confirmation2">
-      <button onclick="location.href='#'"><img src="submit_btn/modoru.png"></button>
-      <button onclick="location.href='#'"><img src="submit_btn/kanryou.png"></button>
+      <button name="act1" onclick="location.href='#'"><img src="submit_btn/modoru.png"></button>
+      <button name="act2" onclick="location.href='#'"><img src="submit_btn/kanryou.png"></button>
     </div>
 
   </article>
