@@ -5,7 +5,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="google" value="notranslate">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>メールアドレス変更確認画面</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
 <link href="css/input.css" rel="stylesheet" type="text/css">
