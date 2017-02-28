@@ -80,11 +80,11 @@
           </form>
         </div><!--form_wrapper終了-->
       </section>
-      <section class="search_result">
 <%
         if(products == null) {
   				// 商品不在の表示
         } else {
+        	out.println("<section class=\"search_result\">");
         	out.println("<h1 class=\"search_result_title\">サイト内検索結果</h1>");
    				out.println("<h2 class=\"search_result_number\"><span>\"\"</span>の検索結果は<span>" + products.size() + "</span>件です。</h2>");
    				
@@ -97,6 +97,8 @@
 	        	out.println("</div>");
 	        	out.println("</div>");
 	        }
+	        
+	        out.println("</section>");
         }
 %>
 
@@ -113,8 +115,6 @@
           <li><a href="#">9</a></li>
           <li><a href="#">10</a></li>
         </ul> -->
-
-      </section>
     </article>
     <!--フッター　//共通項目-->
 <%@ include file="footer.jsp" %>
