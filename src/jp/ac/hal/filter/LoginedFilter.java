@@ -43,6 +43,8 @@ public class LoginedFilter implements Filter {
 		HttpServletResponse hsr = (HttpServletResponse)response;
 		if(session == null) {
 			hsr.sendRedirect("index.jsp");
+		} else if(null == session.getAttribute("isLogin") ) {
+			hsr.sendRedirect("index.jsp");
 		} else if(!Boolean.valueOf(session.getAttribute("isLogin").toString() ) ) {
 			hsr.sendRedirect("index.jsp");
 		}
