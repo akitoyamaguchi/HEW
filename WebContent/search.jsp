@@ -1,5 +1,10 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="jp.ac.hal.hew.Product" %>
+<%@ page import="java.util.ArrayList" %>
+<%
+	ArrayList<Product> products = (ArrayList<Product>)request.getAttribute("products");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +31,7 @@
 
         <h1 class="cotents_search_title">詳細検索</h1>
         <div class="form_wrapper">
-          <form action="#" method="post">
+          <form action="ProductDisplay" method="post">
             <dl>
               <dt>商品名</dt>
                 <dd>
@@ -76,19 +81,27 @@
         </div><!--form_wrapper終了-->
       </section>
       <section class="search_result">
-        <h1 class="search_result_title">サイト内検索結果</h1>
-        <h2 class="search_result_number">  <span>""</span>の検索結果は<span>999</span>件です。</h2>
-
-        <div class="search_result_contents">
-          <p class="image"><img src="img/a.png" alt="" /></p>
-          <div class="product_infomation">
-            <p class="product_name">商品名</p>
-            <p class="product_description">商品説明</p>
-          </div>
-        </div>
+<%
+        if(products == null) {
+  				// 商品不在の表示
+        } else {
+        	out.println("<h1 class=\"search_result_title\">サイト内検索結果</h1>");
+   				out.println("<h2 class=\"search_result_number\"><span>\"\"</span>の検索結果は<span>" + products.size() + "</span>件です。</h2>");
+   				
+	        for(Product p: products) {
+	        	out.println("<div class=\"search_result_contents\">");
+	        	out.println("<p class=\"image\"><a href=\"product_detail.jsp?id=" + p.getId() + "\"><img src=\"" + p.getMainImage() + "\" alt=\"" + p.getName() + "\" /></a></p>");
+	        	out.println("<div class=\"product_infomation\">");
+	        	out.println("<p class=\"product_name\">" + p.getName() + "</p>");
+	        	out.println("<p class=\"product_description\">" + p.getDetail() + "</p>");
+	        	out.println("</div>");
+	        	out.println("</div>");
+	        }
+        }
+%>
 
         <!-- ページジャンプ -->
-        <ul class="pages_number">
+<!--         <ul class="pages_number">
           <li><a href="#">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
@@ -99,7 +112,7 @@
           <li><a href="#">8</a></li>
           <li><a href="#">9</a></li>
           <li><a href="#">10</a></li>
-        </ul>
+        </ul> -->
 
       </section>
     </article>

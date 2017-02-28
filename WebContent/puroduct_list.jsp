@@ -4,6 +4,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%
 	ArrayList<Product> products = (ArrayList<Product>)request.getAttribute("products");
+	out.println();
 %>
 <!DOCTYPE html>
 <html>
@@ -24,7 +25,6 @@
   <!-- 全体ラッパー -->
   <div class="wrapper">
     <!-- ヘッダー -->
-    <header>
 <%@ include file="header.jsp" %>
     <!-- メインコンテンツ -->
     <article>
@@ -38,7 +38,7 @@
 	        for(Product p: products) {
 	        	out.println("<section class=\"box_item\">");
 	        	out.println("<div class=\"image_wrapper\">");
-	        	out.println("<a href=\"product_detail.jsp\"><img src=\"ProductImg/" + p.getName() + "/" + p.getMainImage()+ "\" alt=\" " + p.getName() + " \" /></a>");
+	        	out.println("<a href=\"product_detail.jsp\"><img src=\"" + p.getMainImage()+ "\" alt=\" " + p.getName() + " \" /></a>");
 	        	out.println("</div>");
 	        	out.println("<h1>" + p.getName() + "</h1>");
 	        	out.println("<p>" +p.getPrice()+ "<p>");
@@ -52,70 +52,6 @@
               <a href="#"><img src="img/a.png" alt="" /></a>
             </div>
           <h1>商品名2</h1>
-          <p>値段</p>
-        </section>
-
-        <section class="box_item">
-            <div class="image_wrapper">
-              <a href="#"><img src="img/a.png" alt="" /></a>
-            </div>
-          <h1>商品名3</h1>
-          <p>値段</p>
-        </section>
-
-        <section class="box_item">
-            <div class="image_wrapper">
-              <a href="#"><img src="img/a.png" alt="" /></a>
-            </div>
-          <h1>商品名4</h1>
-          <p>値段</p>
-        </section>
-
-        <section class="box_item">
-            <div class="image_wrapper">
-              <a href="#"><img src="img/a.png" alt="" /></a>
-            </div>
-          <h1>商品名5</h1>
-          <p>値段</p>
-        </section>
-
-        <section class="box_item">
-            <div class="image_wrapper">
-              <a href="#"><img src="img/a.png" alt="" /></a>
-            </div>
-          <h1>商品名6</h1>
-          <p>値段</p>
-        </section>
-
-        <section class="box_item">
-            <div class="image_wrapper">
-              <a href="#"><img src="img/a.png" alt="" /></a>
-            </div>
-          <h1>商品名7</h1>
-          <p>値段</p>
-        </section>
-
-        <section class="box_item">
-            <div class="image_wrapper">
-              <a href="#"><img src="img/a.png" alt="" /></a>
-            </div>
-          <h1>商品名8</h1>
-          <p>値段</p>
-        </section>
-
-        <section class="box_item">
-            <div class="image_wrapper">
-              <a href="#"><img src="img/a.png" alt="" /></a>
-            </div>
-          <h1>商品名9</h1>
-          <p>値段</p>
-        </section>
-
-        <section class="box_item">
-            <div class="image_wrapper">
-              <a href="#"><img src="img/a.png" alt="" /></a>
-            </div>
-          <h1>商品名10</h1>
           <p>値段</p>
         </section>
       </div>

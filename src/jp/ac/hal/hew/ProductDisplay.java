@@ -32,7 +32,7 @@ public class ProductDisplay extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("products", products);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("product_list.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("search.jsp");
 		dispatcher.forward(request, response);
 	}
 
