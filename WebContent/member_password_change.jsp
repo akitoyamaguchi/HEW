@@ -9,7 +9,6 @@
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
 
 <style type="text/css">
-
 </style>
 <script type="text/javascript" src="js/lib/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/MemberRegister.js"></script>
