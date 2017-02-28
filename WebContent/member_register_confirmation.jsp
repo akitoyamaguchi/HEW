@@ -44,11 +44,11 @@
               </dd>
           </dl>
         </div>
-        <div class="btn_confirmation2">
-            <input type="submit" name="act1" value="" class="modoru">
-            <input type="submit" name="act2" value="" class="kanryou">
-        </div>
     </section>
+    <div class="btn_confirmation2">
+      <button name="act1" onclick="location.href='#'"><img src="submit_btn/modoru.png"></button>
+      <button name="act2" onclick="location.href='#'"><img src="submit_btn/kanryou.png"></button>
+    </div>
 
   </article>
 

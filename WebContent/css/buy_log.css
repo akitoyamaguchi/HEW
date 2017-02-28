@@ -1,0 +1,256 @@
+
+/*全体ラッパー*/
+.contents_search_wrapper{
+	max-width: 1920px;
+	min-width: 1080px;
+	height: auto;
+	margin: 0 auto;
+}
+
+/*商品検索*/
+dl{
+	border-bottom: solid 1px #eee;
+	padding: 10px 0;
+	margin: 0;
+}
+dt,dd{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 14px;
+	font-weight: bold;
+}
+dt{/*左タイトル*/
+	width: 15vw;
+	min-width: 210px;
+
+}
+.deadline_select{
+	width: 15vw;
+	min-width: 510px;
+}
+.deadline_select label{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.btn_search{
+	width: 800px;
+	min-width: 800px;
+	height: auto;
+	min-height: 130px;
+	margin: auto;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/*検索結果*/
+.search_result{
+	width: 900px;
+	min-width: 900px;
+	height: auto;
+	min-height: 365px;
+	border: solid 1px #000;
+	padding:0 32px 0 32px;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.search_result_title{
+	font-size: 28px;
+	font-weight: bold;
+	padding: 3px 0 5px 0;
+	text-align: center;
+}
+.search_result_number{
+	font-size: 23px;
+	font-weight: bold;
+	padding: 6px 0;
+	border-top: dashed 2px #999;
+	border-bottom: dashed 2px #999;
+	text-align: right;
+}
+.search_result_contents{
+	width: 750px;
+	height: 150px;
+	margin: 10px auto;
+	padding: 18px 20px 0 20px;
+	border: solid 1px #999;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+.buy_days{
+	width: 750px;
+	height: 50px;
+	margin-bottom: 8px;
+	padding-right: 30px;
+	border-bottom: solid 1px #999 ;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.search_result_contents img{
+	width: 80px;
+	height: 80px;
+	border: solid 1px #999;
+	border-radius: 50%;
+}
+.image{
+	width: 120px;
+	height: 100px;
+}
+.product_infomation{
+	width: 630px;
+	height: 100px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+.product_name{
+	width: 600px;
+	height: 20px;
+}
+.product_description{
+	width:600px;
+	height: 70px;
+	margin-top: 10px;
+}
+/*ページジャンプ*/
+.pages_number{
+  display: flex;
+  width: auto;
+	min-width: 800px;
+  height: 40px;
+  margin: 0 auto;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.pages_number li{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.pages_number li a{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* テキストフォームの設定(text) */
+input[type="text"],textarea{
+	padding: 10px;
+	color: #444;
+	border: solid 1px #ccc;
+	margin: 3px 0;
+	width: 330px;
+	border-radius: 3px;
+}
+.deadline_select input[type="text"],textarea{
+	padding: 10px;
+	color: #444;
+	border: solid 1px #ccc;
+	margin: 3px 0;
+	width: 120px;
+	min-width: 100px;
+	border-radius: 3px;
+}
+.form_wrapper select{
+	padding: 10px;
+	color: #444;
+	border: solid 1px #ccc;
+	margin: 3px 0;
+	width: 230px;
+	border-radius: 3px;
+	text-align: center;
+	background: url(../img/select_arrow.png) right 5% top 50% no-repeat;
+	background-size: 15px;
+	cursor: pointer;
+}
+input[type="tel"],textarea{
+	padding: 10px;
+	color: #444;
+	border: solid 1px #ccc;
+	margin: 3px 0;
+	width: 30vw;
+	min-width: 250px;
+	border-radius: 3px;
+}
+input[type="email"],textarea{
+	padding: 10px;
+	color: #444;
+	border: solid 1px #ccc;
+	margin: 3px 0;
+	width: 30vw;
+	min-width: 250px;
+	border-radius: 3px;
+}
+/*ラジオボタン設定*/
+input[type="radio"] {
+	display: none;/*レイアウトを揃える*/
+}
+input[type="radio"] + label {/*関連付けられたテキスト部分をクリックしてもチェックを付けることができる*/
+	position: relative;/*ポジションの設定*/
+	display: inline-block;
+	margin: 0 20px;
+	padding: 3px 3px 3px 20px;
+	cursor: pointer;
+}
+input[type="radio"] + label::before {
+	position: absolute;/*ポジションの設定*/
+	content: '';/*要素にコンテンツを挿入する際に使用*/
+	top: 50%;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	margin-top: -8px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 100%;/*ラジオボタンを丸くする*/
+}
+input[type="radio"]:checked + label::after {
+	position: absolute;/*ポジションの設定*/
+	content: '';/*要素にコンテンツを挿入する際に使用*/
+	top: 50%;
+	left: 4px;
+	width: 8px;
+	height: 8px;
+	margin-top: -4px;
+	background: #007bbb;
+	border-radius: 100%;/*ラジオボタンを丸くする*/
+}
+
+/* テキストフォームの設定(password) */
+.form_wrapper select:focus{
+	border: 1px solid #1abc9c;
+	box-shadow: 1px 1px 3px #48a;
+}
+input[type="text"]:focus,textarea{
+	border: 1px solid #1abc9c;
+	box-shadow: 1px 1px 3px #48a;
+}
+input[type="tel"]:focus,textarea{
+	border: 1px solid #1abc9c;
+	box-shadow: 1px 1px 3px #48a;
+}
+input[type="email"]:focus,textarea{
+	border: 1px solid #1abc9c;
+	box-shadow: 1px 1px 3px #48a;
+}
+
+.search{
+	display: block;
+	border: 0px;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;/*センターに表示*/
+	background: url(../submit_btn/search.png) left top no-repeat;
+}
+.search:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}

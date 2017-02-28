@@ -5,8 +5,8 @@ var result = new Object();
 window.onload = init;
 
 function init() {
-  $('input[name="act1"]').click(returnPage);
-  $('input[name="act2"]').click(execPost);
+  $('button[name="act1"]').click(returnPage);
+  $('button[name="act2"]').click(execPost);
   getParam();
 	
 }
