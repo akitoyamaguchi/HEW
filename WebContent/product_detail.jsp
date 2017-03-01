@@ -1,5 +1,22 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="jp.ac.hal.hew.Product" %>
+<%@ page import="jp.ac.hal.hew.Category" %>
+<%@ page import="jp.ac.hal.hew.Makers" %>
+<%@ page import="jp.ac.hal.hew.ProductImages" %> %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+    
+<%
+	Product detail = (Product)request.getAttribute("detail");
+	Makers maker = (Makers)request.getAttribute("maker");	
+	Category category = (Category)request.getAttribute("category");
+	ArrayList<ProductImages> apis = (ArrayList<ProductImages>)(request.getAttribute("productImages") );
+	ProductImages[] pis = new ProductImages[apis.size()];
+	for (int i = 0; i < apis.size(); i++) {
+		pis[i] = apis.get(i);
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,19 +45,19 @@
     <!-- 左カラム -->
       <section class="left_column_wrapper">
         <div class="main_pic_wrapper">
-          <p class="main_contents_pic"><img src="img/sample1.jpg" alt="????????????" /></p>
+          <p class="main_contents_pic"><img src="<%= detail.getMainImage() %>" alt="pic1" /></p>
         </div>
         <div class="sub_pic_wrapper">
-          <p class="sub_contents_pic"><img src="img/sample1.jpg" alt="????????????" /></p>
-          <p class="sub_contents_pic"><img src="img/sample2.jpg" alt="????????????" /></p>
-          <p class="sub_contents_pic"><img src="img/sample3.jpg" alt="????????????" /></p>
+          <p class="sub_contents_pic"><img src="<%= pis[0].getPath() %>" alt="pic1" /></p>
+          <p class="sub_contents_pic"><img src="<%= pis[1].getPath() %>" alt="pic2" /></p>
+          <p class="sub_contents_pic"><img src="<%= pis[2].getPath() %>" alt="pic3" /></p>
           <button class="left_column_btn">COLOR</button>
           <button class="left_column_btn">3D VIEW</button>
         </div>
       </section>
     <!-- 右カラム -->
       <section class="right_column_wrapper">
-        <p class="price">PRICE<br /><span>￥</span>5,000</p>
+        <p class="price">PRICE<br /><span>￥</span><%= detail.getPrice() %></p>
 
         <button class="wish_list">ほしいものリスト</button>
 
@@ -53,40 +70,31 @@
       </section>
     <!-- 商品情報 -->
       <section class="contents_info_wrapper">
-        <h2 class="contents_info_title">???????????±</h2>
+        <h2 class="contents_info_title">商品情報</h2>
         <ul class="contents_info">
           <dl>
             <dt>商品名</dt>
-            <dd>PL380</dd>
+            <dd><%= detail.getName() %></dd>
           </dl>
           <dl>
-            <dt>品番</dt>
-            <dd>123456789</dd>
+            <dt>メーカー</dt>
+            <dd><%= maker.getMaker_name() %></dd>
           </dl>
           <dl>
             <dt>サイズ</dt>
-            <dd>MIDDLE</dd>
+            <dd><%= detail.getSize() %></dd>
           </dl>
           <dl>
-            <dt>性別</dt>
-            <dd>MEN</dd>
+            <dt>カテゴリー</dt>
+            <dd><%= category.getRemarks() %></dd>
           </dl>
           <dl>
-            <dt>スタイル</dt>
-            <dd>SQUARE</dd>
-          </dl>
-          <dl>
-            <dt>素材</dt>
-            <dd>CARBON</dd>
+            <dt>発売日</dt>
+            <dd><%= detail.getReleaseOn() %></dd>
           </dl>
           <dl>
             <dt>商品説明</dt>
-            <dd>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-            テストテストテストテストテストテストテストテストテストテストテスト</dd>
+            <dd><%= detail.getDetail() %></dd>
           </dl>
         </ul>
       </section>
