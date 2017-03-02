@@ -46,7 +46,7 @@ public class ProductDAO extends CommonDAO {
     public Product seletById(int id) {
         Product prodcut = null;
         try {
-            String sql = "SELECT * from t_tr_products WHERE id = ?";
+            String sql = "SELECT * from t_tr_products WHERE products_product_id = ?";
             try(PreparedStatement ps = super.getPreparedStatement(sql) ) {
                 ps.setInt(1, id);
 

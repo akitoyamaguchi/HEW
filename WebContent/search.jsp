@@ -90,7 +90,7 @@
    				
 	        for(Product p: products) {
 	        	out.println("<div class=\"search_result_contents\">");
-	        	out.println("<p class=\"image\"><a href=\"product_detail.jsp?id=" + p.getId() + "\"><img src=\"" + p.getMainImage() + "\" alt=\"" + p.getName() + "\" /></a></p>");
+	        	out.println("<p class=\"image\"><a href=\"productDtail?id=" + p.getId() + "\"><img src=\"" + p.getMainImage() + "\" alt=\"" + p.getName() + "\" /></a></p>");
 	        	out.println("<div class=\"product_infomation\">");
 	        	out.println("<p class=\"product_name\">" + p.getName() + "</p>");
 	        	out.println("<p class=\"product_description\">" + p.getDetail() + "</p>");

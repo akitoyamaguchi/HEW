@@ -18,7 +18,7 @@ public class ProductImagesDAO extends CommonDAO {
 	public List<ProductImages> seletById(int id) {
 	    List<ProductImages> productImage = new ArrayList<ProductImages>();
 	    try {
-	        String sql = "SELECT * from t_m_product_category WHERE id = ?";
+	        String sql = "SELECT * from t_tr_products_images WHERE products_images_product_id = ?";
 	        try(PreparedStatement ps = super.getPreparedStatement(sql) ) {
 	            ps.setInt(1, id);
 	

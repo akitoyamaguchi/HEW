@@ -3,7 +3,7 @@
 <%@ page import="jp.ac.hal.hew.Product" %>
 <%@ page import="jp.ac.hal.hew.Category" %>
 <%@ page import="jp.ac.hal.hew.Makers" %>
-<%@ page import="jp.ac.hal.hew.ProductImages" %> %>
+<%@ page import="jp.ac.hal.hew.ProductImages" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
     
@@ -48,6 +48,7 @@
           <p class="main_contents_pic"><img src="<%= detail.getMainImage() %>" alt="pic1" /></p>
         </div>
         <div class="sub_pic_wrapper">
+        	<%out.println("TEST_TEST_TEST" + pis.length); %>
           <p class="sub_contents_pic"><img src="<%= pis[0].getPath() %>" alt="pic1" /></p>
           <p class="sub_contents_pic"><img src="<%= pis[1].getPath() %>" alt="pic2" /></p>
           <p class="sub_contents_pic"><img src="<%= pis[2].getPath() %>" alt="pic3" /></p>

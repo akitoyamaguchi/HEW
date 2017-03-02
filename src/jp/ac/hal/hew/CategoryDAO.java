@@ -15,7 +15,7 @@ public class CategoryDAO extends CommonDAO {
 	public Category seletById(int id) {
 	    Category category = null;
 	    try {
-	        String sql = "SELECT * from t_m_product_category WHERE id = ?";
+	        String sql = "SELECT * from t_m_product_category WHERE product_category_category_id = ?";
 	        try(PreparedStatement ps = super.getPreparedStatement(sql) ) {
 	            ps.setInt(1, id);
 	

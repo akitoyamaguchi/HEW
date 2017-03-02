@@ -16,7 +16,7 @@ public class MakerDAO extends CommonDAO {
 	public Makers seletById(int id) {
 	    Makers maker = null;
 	    try {
-	        String sql = "SELECT * from t_m_product_category WHERE id = ?";
+	        String sql = "SELECT * from t_m_makers WHERE makers_maker_id = ?";
 	        try(PreparedStatement ps = super.getPreparedStatement(sql) ) {
 	            ps.setInt(1, id);
 	

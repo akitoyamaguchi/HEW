@@ -23,7 +23,8 @@ public class productDtail extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int id = Integer.valueOf(request.getParameter("id") ); 
+		int id = Integer.valueOf(request.getParameter("id").toString() ); 
+		
 		Product product = null;
 		Category category = null;
 		Makers maker = null;
@@ -36,7 +37,7 @@ public class productDtail extends HttpServlet {
 			ProductImagesDAO pidao = new ProductImagesDAO();
 			product = pdao.seletById(id);
 			category = cdao.seletById(product.getCategory() );
-			maker = mdao.seletById(id);
+			maker = mdao.seletById(product.getMaker() );
 			pis = pidao.seletById(id);
 			
 		}catch(ClassNotFoundException e) {
@@ -47,6 +48,7 @@ public class productDtail extends HttpServlet {
 		request.setAttribute("category", category);
 		request.setAttribute("maker", maker);
 		request.setAttribute("productImages", pis);
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("product_detail.jsp");
 		dispatcher.forward(request, response);
 	}
