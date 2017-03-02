@@ -26,7 +26,7 @@
       <button class="header_button_serch" onclick="location.href='search.jsp'"><img src="submit_btn/search.png" /></button>
       <button class="header_button_useradd" onclick="location.href='member_register.jsp'"><img src="submit_btn/shinki.png" /></button>
       <%if(isLogin) { %>
-      <button class="header_button_login" onclick="location.href='logout'"><img src="submit_btn/logout.png" /></button>
+      <button class="header_button_login" onclick="location.href='UserLogout'"><img src="submit_btn/logout.png" /></button>
       <%} else { %>
       <button class="header_button_login" onclick="location.href='login.jsp'"><img src="submit_btn/login.png" /></button>
       <%} %>

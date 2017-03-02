@@ -45,7 +45,7 @@ public class UserAdd extends HttpServlet {
 
 		} else {
 			//エラーページ未実装
-			url = "/index.html";
+			url = "/index.jsp";
 			System.out.println("デバッグ用：ユーザ登録に失敗しました。");
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);

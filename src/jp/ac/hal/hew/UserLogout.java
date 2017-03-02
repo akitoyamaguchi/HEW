@@ -27,7 +27,7 @@ public class UserLogout extends HttpServlet {
 			session = null;
 		}
 		
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("/HEW/index.jsp");
 	}
 
 	/**
