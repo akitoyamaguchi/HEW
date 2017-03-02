@@ -2,6 +2,7 @@
 .member_register_wrapper{
 	width: 80vw;
 	height: 50vh;
+	min-height: 440px;
 	padding:0 32px 0 32px;
 	margin: 20px auto;
 	background-color: ;
