@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="google" value="notranslate">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>発送先登録完了画面</title>
+<title>発送先変更完了画面</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css">
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
 <link href="css/complete.css" rel="stylesheet" type="text/css">
