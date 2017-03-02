@@ -43,11 +43,22 @@
 	border-radius: 10px;
 	cursor: pointer;
 }
+/*コンテンツ*/
+.sipping_wrap{
+	width: 900px;
+	min-width: 900px;
+	height: auto;
+	min-height: 365px;
+	padding:0 32px 0 32px;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
 .member_shipping{
 	width: 900px;
 	min-width: 900px;
-	height: 322px;
-	min-height: 322px;
+	height: 243px;
 	margin: 20px auto;
 	border: solid 1px;
 	background-color: #d6d6d6;
@@ -88,6 +99,10 @@
 	border-radius: 10px;
 	cursor: pointer;
 }
+.member_shipping_right button:hover{
+	cursor: pointer;
+	opacity: 0.7;
+}
 .member_shipping_top{
 	width: 747px;
 	min-width: 747px;
@@ -119,30 +134,6 @@
 .member_shipping_middle p{
 	margin: 30px 0 10px;
 	padding: 10px 0;
-}
-.member_shipping_button{
-	width: 898px;
-	min-width: 898px;
-	height: 76px;
-	min-height: 76px;
-	border: solid 1px;
-	background-color: #fff;
-	font-size: 21px;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-}
-.member_shipping_button button{
-	width: 160px;
-	height: 35px;
-	margin: 10px auto;
-	line-height: 25px;
-	font-size: 16px;
-	font-weight: bold;
-	color: #ccc;
-	background-color: #db0000;
-	border-radius: 10px;
-	cursor: pointer;
 }
 
 /* フォームスタイルのリセット */

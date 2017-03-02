@@ -1,3 +1,6 @@
+body{
+	background-color: #eee;
+}
 
 /*全体ラッパー*/
 .contents_search_wrapper{
@@ -57,6 +60,7 @@ dt{/*左タイトル*/
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	background-color: #fff;
 }
 .search_result_title{
 	font-size: 28px;
