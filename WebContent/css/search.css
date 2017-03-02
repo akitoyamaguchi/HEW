@@ -98,9 +98,9 @@ dt{/*左タイトル*/
 }
 .search_result_contents{
 	width: 850px;
-	height: 100px;
+	height: auto;
 	margin: 10px auto;
-	padding: 18px 32px 0 32px;
+	padding: 5px 32px 5px 32px;
 	border-bottom: dashed 2px #999;
 	display: flex;
 	flex-flow: row wrap;
@@ -114,23 +114,26 @@ dt{/*左タイトル*/
 }
 .image{
 	width: 120px;
-	height: 100px;
+	height: auto;
 }
 .product_infomation{
 	width: 730px;
-	height: 100px;
+	height: auto;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
 }
 .product_name{
 	width: 730px;
-	height: 20px;
+	height: auto;
+	font-size: 16px;
+	font-weight: bold;
 }
 .product_description{
 	width:730px;
-	height: 70px;
-	margin-top: 10px;
+	height: auto;
+	margin: 10px 0;
+	font-size: 18px;
 }
 /*ページジャンプ*/
 .pages_number{
