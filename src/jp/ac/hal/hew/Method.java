@@ -24,9 +24,10 @@ public class Method extends HttpServlet {
 		request.setAttribute("id", id);
 		HttpSession session = request.getSession(false);
 		if(session != null && session.getAttribute("isLogin") != null) {
-			response.sendRedirect("/HEW/member_buy.jsp");
+			// member_buyはスキップする
+			response.sendRedirect("/HEW/payment.jsp");
 		} else {
-			response.sendRedirect("/HEW/method.jsp");
+			response.sendRedirect("/method.jsp");
 		}
 	}
 

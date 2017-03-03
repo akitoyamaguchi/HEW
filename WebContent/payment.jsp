@@ -56,7 +56,7 @@
     <section class="payment_cash">
       <form action="#" method="post">
         <div class="select_cash_btn_wrapper">
-          <input type="submit" name="" class="select_cash_btn"></inpput>
+          <input type="submit" name="" class="select_cash_btn"></input>
           <div class="cash_description">
             <p>※代金引換は国内配送のみ。<br />代引手数料がかかります。</p>
           </div>
