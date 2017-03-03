@@ -41,7 +41,7 @@
             <dl>
               <dt>カード名義人（半角ローマ字）</dt>
                 <dd>
-                  <input type="text" size="40" placeholder="カード名義人を入力" name="address_con" pattern="^[a-z]+[A-Z]+$" title="※カタカタのみ入力できます"/>
+                  <input type="text" size="40" placeholder="カード名義人を入力" name="address_con" pattern="^[a-zA-Z]+$" title="※ローマ字のみ入力できます"/>
                 </dd>
             </dl>
             <dl>

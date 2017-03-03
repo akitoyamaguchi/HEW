@@ -6,10 +6,10 @@
 <%@ page import="jp.ac.hal.hew.ProductImages" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-    
+
 <%
 	Product detail = (Product)request.getAttribute("detail");
-	Makers maker = (Makers)request.getAttribute("maker");	
+	Makers maker = (Makers)request.getAttribute("maker");
 	Category category = (Category)request.getAttribute("category");
 	ArrayList<ProductImages> apis = (ArrayList<ProductImages>)(request.getAttribute("productImages") );
 	ProductImages[] pis = new ProductImages[apis.size()];
@@ -60,13 +60,13 @@
       <section class="right_column_wrapper">
         <p class="price">PRICE<br /><span>￥</span><%= detail.getPrice() %></p>
 
-        <button class="wish_list">ほしいものリスト</button>
+        <button class="wish_list" onclick="location.href='wish_list.jsp'">ほしいものリスト</button>
 
-        <button class="cart_add">カートに入れる</button>
+        <button class="cart_add" onclick="location.href='cart.jsp'">カートに入れる</button>
 
-        <button class="try_on"><img src="btn/sityaku.png"/></button>
+        <button class="try_on" onclick="location.href='try_on.jsp'"><img src="btn/sityaku.png"/></button>
 
-        <button class="buy">購入</button>
+        <button class="buy" onclick="location.href='method.jsp'">購入</button>
 
       </section>
     <!-- 商品情報 -->
