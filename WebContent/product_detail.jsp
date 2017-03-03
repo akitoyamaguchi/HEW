@@ -64,7 +64,7 @@
 
         <button class="cart_add">カートに入れる</button>
 
-        <button class="try_on"><img src="btn/sityaku.png" /></button>
+        <button class="try_on"><img src="btn/sityaku.png"/></button>
 
         <button class="buy">購入</button>
 
