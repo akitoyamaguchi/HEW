@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Method
+ * Servlet implementation class BuyChange
  */
-@WebServlet("/Method")
-public class Method extends HttpServlet {
+@WebServlet("/BuyChange")
+public class BuyChange extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -22,14 +22,25 @@ public class Method extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int id = Integer.valueOf(request.getParameter("id") );
+		int delId = Integer.valueOf(request.getParameter("delId") );
+		UserAddress ua;
 		HttpSession session = request.getSession(false);
 		String URL;
+		
 		if(session != null && session.getAttribute("isLogin") != null) {
-			session.setAttribute("productId", id);
-			URL = "member_buy.jsp";
+			try {
+				UserAddressDAO uadao = new UserAddressDAO();
+				ProductDAO pdao = new ProductDAO();
+				ua = uadao.seletById(delId, (String)session.getAttribute("mail") );
+				Product product = pdao.seletById( (int)session.getAttribute("productId") );
+				request.setAttribute("userAddress", ua);
+				request.setAttribute("product", product);
+			}catch(ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			URL = "buy_change.jsp";
 		} else {
-			URL = "method.jsp";
+			URL = "index.jsp";
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(URL);
 		dispatcher.forward(request, response);

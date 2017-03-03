@@ -65,7 +65,7 @@
 
         <button class="try_on" onclick="location.href='try_on.jsp'"><img src="btn/sityaku.png"/></button>
 
-        <button class="buy" onclick="location.href='Method?=<%= detail.getId() %>>'">購入</button>
+        <button class="buy" onclick="location.href='Method?id=<%= detail.getId() %>'">購入</button>
 
       </section>
     <!-- 商品情報 -->

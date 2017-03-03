@@ -1,5 +1,11 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="jp.ac.hal.hew.UserAddress" %>
+<%@ page import="jp.ac.hal.hew.Product" %>
+<%
+	UserAddress ua = (UserAddress)request.getAttribute("userAddress");
+	Product p = (Product)request.getAttribute("product");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,48 +30,50 @@
     <section class="change_address_payment_wrapper">
       <div class="change_address">
         <h1>お届け先住所</h1>
-        <dl>
-          <dt>氏名</dt>
-            <dd>
-              <p>HAL太郎</p>
-            </dd>
-        </dl>
-        <dl>
-          <dt>フリガナ</dt>
-            <dd>
-              <p>ハルタロウ</p>
-            </dd>
-        </dl>
-        <dl>
-          <dt>郵便番号</dt>
-            <dd>
-              <p>1600023</p>
-            </dd>
-        </dl>
-        <dl>
-          <dt>住所</dt>
-            <dd>
-              <p>東京都新宿区西新宿1-7-3</p>
-            </dd>
-        </dl>
-        <dl>
-          <dt>電話番号</dt>
-            <dd>
-              <p>0333441010</p>
-            </dd>
-        </dl>
-        <dl>
-          <dt>メールアドレス</dt>
-            <dd>
-              <p>nyugaku@tokyo.hal.ac.jp</p>
-            </dd>
-        </dl>
-        <button onclick="location.href='#'">変更</button>
+        <%
+        out.println("<dl>");
+        out.println("<dt>氏名</dt>");
+        out.println("<dd>");
+        out.println("<p>" + ua.getName() + "</p>");
+        out.println("</dd>");
+        out.println("</dl>");
+        out.println("<dl>");
+        out.println("<dt>フリガナ</dt>");
+        out.println("<dd>");
+        out.println("<p>" + ua.getKana() + "</p>");
+        out.println("</dd>");
+        out.println("</dl>");
+        out.println("<dl>");
+        out.println("<dt>郵便番号</dt>");
+        out.println("<dd>");
+        out.println("<p>" + ua.getZipcode() + "</p>");
+        out.println("</dd>");
+        out.println("</dl>");
+        out.println("<dl>");
+        out.println("<dt>住所</dt>");
+        out.println("<dd>");
+        out.println("<p>" + ua.getAddress() + "</p>");
+        out.println("</dd>");
+        out.println("</dl>");
+        out.println("<dl>");
+        out.println("<dt>電話番号</dt>");
+        out.println("<dd>");
+        out.println("<p>" + ua.getPhoneNum() + "</p>");
+        out.println("</dd>");
+        out.println("</dl>");
+        out.println("<dl>");
+        out.println("<dt>メールアドレス</dt>");
+        out.println("<dd>");
+        out.println("<p>" + session.getAttribute("mail") + "</p>");
+        out.println("</dd>");
+        out.println("</dl>");
+        %>
+        <button onclick="location.href='dispatch_change.jsp'">変更</button>
       </div>
       <div class="change_payment">
         <h2>支払い方法</h2>
         <label>代金引換<br /></label><p>(国内配送のみ。代引き手数料がかかります。)</p>
-        <button onclick="location.href='payment.jsp'">変更</button>
+        <button onclick="location.href='payment.jsp?=<%= ua.getDeliveryAddressNum() %>>">変更</button>
       </div>
     </section>
 
@@ -73,8 +81,8 @@
       <div class="bottom_contents_wrapper">
         <form class="select_shipping_form" action="#" method="post">
           <div class="contents">
-            <p><img src="img/a.png" /></p>
-            <p class="contents_info">商品名<br />価格<br />数量</p>
+            <p><img src=<%= p.getMainImage() %> /></p>
+            <p class="contents_info"><%= p.getName() %><br><%= p.getPrice() %>
           </div>
           <div class="change_shipping">
             <h1>配送方法</h1>
@@ -149,11 +157,7 @@
         </form>
       </div>
     </section>
-
-
   </article>
-
-
     <!--フッター-->
 <%@ include file="footer.jsp" %>
   </div>

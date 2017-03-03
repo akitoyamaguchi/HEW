@@ -1,5 +1,8 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	int delId = Integer.valueOf(request.getParameter("delId") );
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,11 +57,11 @@
     </section>
 
     <section class="payment_cash">
-      <form action="#" method="post">
+      <form action="BuyChange?delId=<%= delId %>" method="post">
         <div class="select_cash_btn_wrapper">
           <input type="submit" name="" class="select_cash_btn"></input>
           <div class="cash_description">
-            <p>※代金引換は国内配送のみ。<br />代引手数料がかかります。</p>
+            <p>※代金引換は国内配送のみ。<br/>代引手数料がかかります。</p>
           </div>
         </div>
       </form>
