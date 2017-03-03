@@ -71,33 +71,35 @@
       </section>
     <!-- 商品情報 -->
       <section class="contents_info_wrapper">
-        <h2 class="contents_info_title">商品情報</h2>
-        <ul class="contents_info">
-          <dl>
-            <dt>商品名</dt>
-            <dd><%= detail.getName() %></dd>
-          </dl>
-          <dl>
-            <dt>メーカー</dt>
-            <dd><%= maker.getMaker_name() %></dd>
-          </dl>
-          <dl>
-            <dt>サイズ</dt>
-            <dd><%= detail.getSize() %></dd>
-          </dl>
-          <dl>
-            <dt>カテゴリー</dt>
-            <dd><%= category.getRemarks() %></dd>
-          </dl>
-          <dl>
-            <dt>発売日</dt>
-            <dd><%= detail.getReleaseOn() %></dd>
-          </dl>
-          <dl>
-            <dt>商品説明</dt>
-            <dd><%= detail.getDetail() %></dd>
-          </dl>
-        </ul>
+        <div class="contents_info_wrap2">
+          <h2 class="contents_info_title">商品情報</h2>
+          <ul class="contents_info">
+            <dl>
+              <dt>商品名</dt>
+              <dd><%= detail.getName() %></dd>
+            </dl>
+            <dl>
+              <dt>メーカー</dt>
+              <dd><%= maker.getMaker_name() %></dd>
+            </dl>
+            <dl>
+              <dt>サイズ</dt>
+              <dd><%= detail.getSize() %></dd>
+            </dl>
+            <dl>
+              <dt>カテゴリー</dt>
+              <dd><%= category.getRemarks() %></dd>
+            </dl>
+            <dl>
+              <dt>発売日</dt>
+              <dd><%= detail.getReleaseOn() %></dd>
+            </dl>
+            <dl>
+              <dt>商品説明</dt>
+              <dd><%= detail.getDetail() %></dd>
+            </dl>
+          </ul>
+        </div>
       </section>
     </div>
   </article>
