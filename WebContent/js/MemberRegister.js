@@ -58,7 +58,6 @@ function comp() {
     alert(errorMes);
     return false;
   } else {
-    alert('OK');
     dateSend(add, passwd);
     return false
   }

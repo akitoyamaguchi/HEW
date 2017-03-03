@@ -48,7 +48,6 @@
           <p class="main_contents_pic"><img src="<%= detail.getMainImage() %>" alt="pic1" /></p>
         </div>
         <div class="sub_pic_wrapper">
-        	<%out.println("TEST_TEST_TEST" + pis.length); %>
           <p class="sub_contents_pic"><img src="<%= pis[0].getPath() %>" alt="pic1" /></p>
           <p class="sub_contents_pic"><img src="<%= pis[1].getPath() %>" alt="pic2" /></p>
           <p class="sub_contents_pic"><img src="<%= pis[2].getPath() %>" alt="pic3" /></p>
@@ -66,7 +65,7 @@
 
         <button class="try_on" onclick="location.href='try_on.jsp'"><img src="btn/sityaku.png"/></button>
 
-        <button class="buy" onclick="location.href='method.jsp'">購入</button>
+        <button class="buy" onclick="location.href='Method?id=<%= detail.getId() %>'">購入</button>
 
       </section>
     <!-- 商品情報 -->
