@@ -5,6 +5,8 @@
 <%
 	UserAddress ua = (UserAddress)request.getAttribute("userAddress");
 	Product p = (Product)request.getAttribute("product");
+	session.setAttribute("userAddress", ua);
+	session.setAttribute("product", p);
 %>
 <!DOCTYPE html>
 <html>
@@ -73,7 +75,7 @@
       <div class="change_payment">
         <h2>支払い方法</h2>
         <label>代金引換<br /></label><p>(国内配送のみ。代引き手数料がかかります。)</p>
-        <button onclick="location.href='payment.jsp?=<%= ua.getDeliveryAddressNum() %>>">変更</button>
+        <button onclick="location.href='payment.jsp?delId=<%= ua.getDeliveryAddressNum() %>'">変更</button>
       </div>
     </section>
 
@@ -91,63 +93,63 @@
                 <div class="shipping_date_select_wrapper">
                   <label for="shipping_month_select">日にち指定</label>
                     <select name="shipping_month_select" class="shipping_month_select">
-                      <option value="January" selected>01月</option>
-                      <option value="February">02月</option>
-                      <option value="March">03月</option>
-                      <option value="April">04月</option>
-                      <option value="May">05月</option>
-                      <option value="June">06月</option>
-                      <option value="July">07月</option>
-                      <option value="August">08月</option>
-                      <option value="September">09月</option>
-                      <option value="October">10月</option>
-                      <option value="November">11月</option>
-                      <option value="December">12月</option>
+                      <option value="01" selected>01月</option>
+                      <option value="02">02月</option>
+                      <option value="03">03月</option>
+                      <option value="04">04月</option>
+                      <option value="05">05月</option>
+                      <option value="06">06月</option>
+                      <option value="07">07月</option>
+                      <option value="08">08月</option>
+                      <option value="09">09月</option>
+                      <option value="10">10月</option>
+                      <option value="11">11月</option>
+                      <option value="12">12月</option>
                     </select>
                     <select name="shipping_day_select" class="shipping_day_select">
-                      <option value="01日" selected>01日</option>
-                      <option value="02日">02日</option>
-                      <option value="03日">03日</option>
-                      <option value="04日">04日</option>
-                      <option value="05日">05日</option>
-                      <option value="06日">06日</option>
-                      <option value="07日">07日</option>
-                      <option value="08日">08日</option>
-                      <option value="09日">09日</option>
-                      <option value="10日">10日</option>
-                      <option value="11日">11日</option>
-                      <option value="12日">12日</option>
-                      <option value="13日">13日</option>
-                      <option value="14日">14日</option>
-                      <option value="15日">15日</option>
-                      <option value="16日">16日</option>
-                      <option value="17日">17日</option>
-                      <option value="18日">18日</option>
-                      <option value="19日">19日</option>
-                      <option value="20日">20日</option>
-                      <option value="21日">21日</option>
-                      <option value="22日">22日</option>
-                      <option value="23日">23日</option>
-                      <option value="24日">24日</option>
-                      <option value="25日">25日</option>
-                      <option value="26日">26日</option>
-                      <option value="27日">27日</option>
-                      <option value="28日">28日</option>
-                      <option value="29日">29日</option>
-                      <option value="30日">30日</option>
-                      <option value="31日">31日</option>
+                      <option value="01" selected>01日</option>
+                      <option value="02">02日</option>
+                      <option value="03">03日</option>
+                      <option value="04">04日</option>
+                      <option value="05">05日</option>
+                      <option value="06">06日</option>
+                      <option value="07">07日</option>
+                      <option value="08">08日</option>
+                      <option value="09">09日</option>
+                      <option value="10">10日</option>
+                      <option value="11">11日</option>
+                      <option value="12">12日</option>
+                      <option value="13">13日</option>
+                      <option value="14">14日</option>
+                      <option value="15">15日</option>
+                      <option value="16">16日</option>
+                      <option value="17">17日</option>
+                      <option value="18">18日</option>
+                      <option value="19">19日</option>
+                      <option value="20">20日</option>
+                      <option value="21">21日</option>
+                      <option value="22">22日</option>
+                      <option value="23">23日</option>
+                      <option value="24">24日</option>
+                      <option value="25">25日</option>
+                      <option value="26">26日</option>
+                      <option value="27">27日</option>
+                      <option value="28">28日</option>
+                      <option value="29">29日</option>
+                      <option value="30">30日</option>
+                      <option value="31">31日</option>
                     </select>
                 </div>
                 <div class="shipping_time_select_wrapper">
                   <label for="shipping_time_select">時間指定</label>
                     <select name="shipping_time_select" class="shipping_time_select">
-                      <option value="01日" selected>08:00~10:00</option>
-                      <option value="02日">10:00~12:00</option>
-                      <option value="03日">12:00~14:00</option>
-                      <option value="04日">14:00~16:00</option>
-                      <option value="05日">16:00~18:00</option>
-                      <option value="05日">18:00~20:00</option>
-                      <option value="05日">20:00~21:00</option>
+                      <option value="8~10" selected>08:00~10:00</option>
+                      <option value="10~12">10:00~12:00</option>
+                      <option value="12~14">12:00~14:00</option>
+                      <option value="14~16">14:00~16:00</option>
+                      <option value="16~18">16:00~18:00</option>
+                      <option value="18~20">18:00~20:00</option>
+                      <option value="20~21">20:00~21:00</option>
                     </select>
                 </div>
           </div>
