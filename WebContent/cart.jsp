@@ -25,7 +25,7 @@
       <!-- card_item1つでワンセットです。 -->
       <!-- カートに商品を追加する場合はcard_item単位で追加してください。 -->
       <div class="card_item">
-        <div class="image_wrapper"><img src="img/b.png" alt=""></div>
+        <div class="image_wrapper"><img src="img/a.png" alt=""></div>
         <div class="item_details">
           <p>商品名</p>
           <p>価格</p>

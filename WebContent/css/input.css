@@ -122,6 +122,10 @@ button img{
 	justify-content: center;
 	align-items: center;
 }
+.btn_confirmation img:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
 .btn_confirmation2{
 	width: 60vw;
 	height: auto;
@@ -132,6 +136,10 @@ button img{
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+}
+.btn_confirmation2 img:hover{
+	opacity: 0.7;
+	cursor: pointer;
 }
 
 /* フォームスタイルのリセット */
@@ -197,8 +205,11 @@ input[type="email"]:focus,textarea{
 	width: 100px;
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
-	cursor: pointer;/*カーソルの変更*/
 	background: url(../submit_btn/kakunin.png) left top no-repeat;
+}
+.kakunin:hover{
+	opacity: 0.7;
+	cursor: pointer;
 }
 .modoru{
 	display: block;
@@ -206,8 +217,11 @@ input[type="email"]:focus,textarea{
 	width: 100px;
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
-	cursor: pointer;/*カーソルの変更*/
 	background: url(../submit_btn/modoru.png) left top no-repeat;
+}
+.modoru:hover{
+	opacity: 0.7;
+	cursor: pointer;
 }
 .kanryou{
 	display: block;
@@ -215,6 +229,9 @@ input[type="email"]:focus,textarea{
 	width: 100px;
 	height: 100px;
 	margin: 0 auto;/*センターに表示*/
-	cursor: pointer;/*カーソルの変更*/
 	background: url(../submit_btn/kanryou.png) left top no-repeat;
+}
+.kanryou:hover{
+	opacity: 0.7;
+	cursor: pointer;
 }
