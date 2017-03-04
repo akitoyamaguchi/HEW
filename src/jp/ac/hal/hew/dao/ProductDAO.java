@@ -1,6 +1,7 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.dao;
 
 import jp.ac.hal.db.CommonDAO;
+import jp.ac.hal.hew.entity.Product;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

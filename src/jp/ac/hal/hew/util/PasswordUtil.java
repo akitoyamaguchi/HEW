@@ -1,4 +1,4 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

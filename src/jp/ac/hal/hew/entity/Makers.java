@@ -1,4 +1,4 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.entity;
 
 public class Makers {
 	private int makers_maker_id;

@@ -1,9 +1,10 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import jp.ac.hal.db.CommonDAO;
+import jp.ac.hal.hew.entity.Category;
 
 public class CategoryDAO extends CommonDAO {
 	Category category;

@@ -1,4 +1,4 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.entity;
 
 public class Category {
 	private int product_category_category_id;

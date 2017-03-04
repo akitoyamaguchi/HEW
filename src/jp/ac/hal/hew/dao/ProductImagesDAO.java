@@ -1,4 +1,4 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.ac.hal.db.CommonDAO;
+import jp.ac.hal.hew.entity.ProductImages;
 
 public class ProductImagesDAO extends CommonDAO {
 	ProductImages productImages;

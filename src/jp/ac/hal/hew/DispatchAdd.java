@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import jp.ac.hal.hew.dao.UserAddressDAO;
+import jp.ac.hal.hew.entity.UserAddress;
+
 /**
  * Servlet implementation class DispatchAdd
  */

@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import jp.ac.hal.hew.dao.UserDAO;
+import jp.ac.hal.hew.entity.User;
+import jp.ac.hal.hew.util.PasswordUtil;
+
 /**
  * Servlet implementation class UserAdd
  */

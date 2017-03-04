@@ -1,4 +1,4 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.entity;
 
 public class ProductImages {
 	private int products_images_product_id;

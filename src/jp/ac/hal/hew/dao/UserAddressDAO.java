@@ -1,6 +1,7 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.dao;
 
 import jp.ac.hal.db.CommonDAO;
+import jp.ac.hal.hew.entity.UserAddress;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,8 +21,8 @@ public class UserAddressDAO extends CommonDAO {
             String sql = "INSERT INTO t_tr_users_addresses VALUES(?,?,?,?,?,?,?)";
 
             try(PreparedStatement ps = super.getPreparedStatement(sql)) {
-                ps.setString(1, userAdd.getUserMailAdd() );
-                ps.setInt(2, userAdd.getDeliveryAddressNum() );
+                ps.setString(1, userAdd.getUserMailAddress() );
+                ps.setInt(2, userAdd.getDeliveryAddressNumber() );
                 ps.setString(3, userAdd.getName() );
                 ps.setString(4, userAdd.getKana() );
                 ps.setString(5, userAdd.getZipcode() );

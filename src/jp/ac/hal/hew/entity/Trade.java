@@ -1,4 +1,4 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.entity;
 
 /**
  * Created by naoaki-sato on 17/02/18.

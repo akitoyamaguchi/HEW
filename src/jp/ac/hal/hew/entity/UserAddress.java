@@ -1,11 +1,11 @@
-package jp.ac.hal.hew;
+package jp.ac.hal.hew.entity;
 
 /**
  * Created by naoaki-sato on 17/02/18.
  */
-public class UserAddresse {
+public class UserAddress {
     private String userMailAddress;
-    private int deliveryAddress;
+    private int deliveryAddressNumber;
     private String name;
     private String kana;
     private String zipcode;
@@ -13,11 +13,11 @@ public class UserAddresse {
     private String phoneNum;
 
 
-    public UserAddresse(String userMailAddress, int deliveryAddress,
+    public UserAddress(String userMailAddress, int deliveryAddressNumber,
                         String name, String kana, String zipcode,
                         String address, String phoneNum) {
         this.userMailAddress = userMailAddress;
-        this.deliveryAddress = deliveryAddress;
+        this.deliveryAddressNumber = deliveryAddressNumber;
         this.name = name;
         this.kana = kana;
         this.zipcode = zipcode;
@@ -33,12 +33,12 @@ public class UserAddresse {
         this.userMailAddress = userMailAddress;
     }
 
-    public int getDeliveryAddress() {
-        return deliveryAddress;
+    public int getDeliveryAddressNumber() {
+        return deliveryAddressNumber;
     }
 
-    public void setDeliveryAddress(int deliveryAddress) {
-        this.deliveryAddress = deliveryAddress;
+    public void setDeliveryAddressNumber(int deliveryAddressNumber) {
+        this.deliveryAddressNumber = deliveryAddressNumber;
     }
 
     public String getName() {

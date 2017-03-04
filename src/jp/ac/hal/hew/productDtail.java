@@ -12,6 +12,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import jp.ac.hal.hew.dao.CategoryDAO;
+import jp.ac.hal.hew.dao.MakerDAO;
+import jp.ac.hal.hew.dao.ProductDAO;
+import jp.ac.hal.hew.dao.ProductImagesDAO;
+import jp.ac.hal.hew.entity.Category;
+import jp.ac.hal.hew.entity.Makers;
+import jp.ac.hal.hew.entity.Product;
+import jp.ac.hal.hew.entity.ProductImages;
+
 /**
  * Servlet implementation class productDtail
  */
