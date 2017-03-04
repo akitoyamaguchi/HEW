@@ -41,7 +41,10 @@
 	color: #ccc;
 	background-color: #db0000;
 	border-radius: 10px;
+}
+.new_shipping:hover{
 	cursor: pointer;
+	opacity: 0.7;
 }
 /*コンテンツ*/
 .sipping_wrap{
@@ -97,7 +100,6 @@
 	color: #ccc;
 	background-color: #db0000;
 	border-radius: 10px;
-	cursor: pointer;
 }
 .member_shipping_right button:hover{
 	cursor: pointer;

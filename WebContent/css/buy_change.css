@@ -3,7 +3,7 @@
 	width: 100vw;
 	min-width: 1080px;
 	height: 80vh;
-	min-height: 860px;
+	min-height: 880px;
 	margin: 0 auto;
 	display: flex;
 	flex-flow: column nowrap;
@@ -13,8 +13,8 @@
 .change_address_payment_wrapper{
 	width: 700px;
 	min-width: 700px;
-	height: 322px;
-	min-height: 322px;
+	height: auto;
+	min-height: 352px;
 	margin: 20px auto;
 	border: solid 1px;
 	background-color: #d6d6d6;
@@ -24,8 +24,8 @@
 .change_address{
 	width: 500px;
 	min-width: 500px;
-	height: 322px;
-	min-height: 322px;
+	height: auto;
+	min-height: 352px;
 	border-right: solid 1px;
 	background-color: #fff;
 }
@@ -68,8 +68,8 @@ dt{/*左タイトル*/
 .change_payment{
 	width: 300px;
 	min-height: 300px;
-	height: 322px;
-	min-height: 322px;
+	height: auto;
+	min-height: 352px;
 	background-color: #fff;
 }
 .change_payment h2{

@@ -41,7 +41,10 @@
 	color: #ccc;
 	background-color: #db0000;
 	border-radius: 10px;
+}
+.new_shipping:hover{
 	cursor: pointer;
+	opacity: 0.7;
 }
 .member_shipping{
 	width: 900px;
@@ -86,7 +89,10 @@
 	color: #ccc;
 	background-color: #db0000;
 	border-radius: 10px;
+}
+.member_shipping_right button:hover{
 	cursor: pointer;
+	opacity: 0.7;
 }
 .member_shipping_top{
 	width: 747px;
@@ -142,7 +148,10 @@
 	color: #ccc;
 	background-color: #db0000;
 	border-radius: 10px;
+}
+.member_shipping_button button:hover{
 	cursor: pointer;
+	opacity: 0.7;
 }
 
 /* フォームスタイルのリセット */
