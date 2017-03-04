@@ -1,9 +1,9 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="jp.ac.hal.hew.Product" %>
-<%@ page import="jp.ac.hal.hew.Category" %>
-<%@ page import="jp.ac.hal.hew.Makers" %>
-<%@ page import="jp.ac.hal.hew.ProductImages" %>
+<%@ page import="jp.ac.hal.hew.entity.Product" %>
+<%@ page import="jp.ac.hal.hew.entity.Category" %>
+<%@ page import="jp.ac.hal.hew.entity.Makers" %>
+<%@ page import="jp.ac.hal.hew.entity.ProductImages" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
 

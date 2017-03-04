@@ -1,6 +1,6 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="jp.ac.hal.hew.Product" %>
+<%@ page import="jp.ac.hal.hew.entity.Product" %>
 <%@ page import="java.util.ArrayList" %>
 <%
 	ArrayList<Product> products = (ArrayList<Product>)request.getAttribute("products");

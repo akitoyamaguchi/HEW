@@ -1,7 +1,11 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	int delId = Integer.valueOf(request.getParameter("delId") );
+	if(session.getAttribute("delId") == null ) {
+		int delId = Integer.valueOf(request.getParameter("delId") );
+		session.setAttribute("delId", delId);
+	}
+
 %>
 <!DOCTYPE html>
 <html>
@@ -40,7 +44,7 @@
         <button class="add_credit">クレジットカードの追加</button>
       </div>
       <div class="select_credit_btn_wrapper">
-        <input type="submit" name="" class="select_credit_btn" /></input>
+        <input type="submit" class="select_credit_btn" /></input>
         <div class="credit_description">
           <p>※使用するカードを選択して「クレジットカードボタン」を押して下さい。</p>
         </div>
@@ -57,11 +61,11 @@
     </section>
 
     <section class="payment_cash">
-      <form action="BuyChange?delId=<%= delId %>" method="post">
+      <form action="BuyChange" method="post">
         <div class="select_cash_btn_wrapper">
-          <input type="submit" name="" class="select_cash_btn"></input>
+          <input type="submit" class="select_cash_btn"></input>
           <div class="cash_description">
-            <p>※代金引換は国内配送のみ。<br/>代引手数料がかかります。</p>
+            <p>※代金引換は国内配送のみ。<br>代引手数料がかかります。</p>
           </div>
         </div>
       </form>

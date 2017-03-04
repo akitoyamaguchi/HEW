@@ -27,9 +27,9 @@ public class BuyChange extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int delId = Integer.valueOf(request.getParameter("delId") );
 		UserAddress ua;
 		HttpSession session = request.getSession(false);
+		int delId = (int)session.getAttribute("delId");
 		String URL;
 		
 		if(session != null && session.getAttribute("isLogin") != null) {

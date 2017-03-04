@@ -1,7 +1,7 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="jp.ac.hal.hew.UserAddress" %>
-<%@ page import="jp.ac.hal.hew.Product" %>
+<%@ page import="jp.ac.hal.hew.entity.UserAddress" %>
+<%@ page import="jp.ac.hal.hew.entity.Product" %>
 <%
 	UserAddress ua = (UserAddress)request.getAttribute("userAddress");
 	Product p = (Product)request.getAttribute("product");
@@ -75,13 +75,13 @@
       <div class="change_payment">
         <h2>支払い方法</h2>
         <label>代金引換<br /></label><p>(国内配送のみ。代引き手数料がかかります。)</p>
-        <button onclick="location.href='payment.jsp?delId=<%= ua.getDeliveryAddressNum() %>'">変更</button>
+        <button onclick="location.href='payment.jsp?delId=<%= ua.getDeliveryAddressNumber() %>'">変更</button>
       </div>
     </section>
 
     <section class="change_shipping_wrapper">
       <div class="bottom_contents_wrapper">
-        <form class="select_shipping_form" action="#" method="post">
+        <form class="select_shipping_form" action="SelectShippingForm" method="post">
           <div class="contents">
             <p><img src=<%= p.getMainImage() %> /></p>
             <p class="contents_info"><%= p.getName() %><br><%= p.getPrice() %>

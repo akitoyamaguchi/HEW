@@ -51,6 +51,7 @@ public class DispatchAdd extends HttpServlet {
 			}catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
+			// 確認画面はスキップ
 			response.sendRedirect("/HEW/dispatch_add_complete.jsp");
 		}
 	}
