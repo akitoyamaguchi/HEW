@@ -30,31 +30,31 @@
             <dl>
               <dt>氏名</dt>
                 <dd>
-                  <input type="text" size="40" placeholder="氏名を入力" name="name" />
+                  <input type="text" size="40" placeholder="氏名を入力" name="name" pattern=".{1,}" />
                 </dd>
             </dl>
             <dl>
               <dt>フリガナ</dt>
                 <dd>
-                  <input type="text" size="40" placeholder="フリガナを入力" name="kana" pattern="^[ァ-ン]+$" title="※カタカタのみ入力できます"/>
+                  <input type="text" size="40" placeholder="フリガナを入力" name="kana" pattern="^([ァ-ン]{1,})$"  title="※カタカタのみ入力できます"/>
                 </dd>
             </dl>
             <dl>
               <dt>郵便番号</dt>
                 <dd>
-                  <input type="text" size="40" maxlength="7" placeholder="郵便番号を入力" name="zipcode" pattern="^[0-9]+$" title="※数字のみ入力できます"/>
+                  <input type="text" size="40" maxlength="7" placeholder="郵便番号を入力" name="zipcode" pattern="^([0-9]{7})$" title="※数字のみ入力できます"/>
                 </dd>
             </dl>
             <dl>
               <dt>住所</dt>
                 <dd>
-                  <input type="text" size="40" placeholder="住所を入力" name="address" />
+                  <input type="text" size="40" placeholder="住所を入力" name="address" pattern=".{1,}"/>
                 </dd>
             </dl>
             <dl>
               <dt>電話番号</dt>
                 <dd>
-                  <input type="tel" size="40" maxlength="11" placeholder="電話番号を入力" name="phone" pattern="^[0-9]+$" title="※数字のみ入力できます"/>
+                  <input type="tel" size="40" maxlength="11" placeholder="電話番号を入力" name="phone" pattern="^([0-9]{10,})$" title="※数字のみ入力できます"/>
                 </dd>
             </dl>
             <div class="btn_next">

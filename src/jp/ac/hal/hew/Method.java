@@ -24,8 +24,9 @@ public class Method extends HttpServlet {
 		// TODO Auto-generated method stub
 		int id = Integer.valueOf(request.getParameter("id") );
 		HttpSession session = request.getSession(false);
+		Boolean isLogin = (Boolean)session.getAttribute("isLogin");
 		String URL;
-		if(session != null && session.getAttribute("isLogin") != null) {
+		if(session != null && isLogin != null && isLogin == true ) {
 			session.setAttribute("productId", id);
 			URL = "member_buy.jsp";
 		} else {
