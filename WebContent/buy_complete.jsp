@@ -23,7 +23,7 @@
 
   <!-- メインコンテンツ -->
     <article class="member_register_wrapper">
-      <h1 class="m_r_title">購入手続きが完了しました。</h2>
+      <h2 class="m_r_title">購入手続きが完了しました。</h2>
 
 
       <section class="btn_confirmation">

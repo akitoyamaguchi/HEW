@@ -36,16 +36,16 @@
       <div class="list_box">
         <h3>会員登録・ログイン</h3>
           <dl>
-            <dt><a href="#">ログイン</a></dt>
-            <dt><a href="#">新規登録</a></dt>
+            <dt><a href="login.jsp">ログイン</a></dt>
+            <dt><a href="member_register.jsp">新規登録</a></dt>
           </dl>
       </div>
       <div class="list_box">
         <h3>その他の項目</h3>
           <dl>
-            <dt><a href="#">商品検索</a></dt>
-            <dt><a href="#">メガネの試着</a></dt>
-            <dt><a href="#">お問い合わせ</a></dt>
+            <dt><a href="search.jsp">商品検索</a></dt>
+            <!-- <dt><a href="#">メガネの試着</a></dt> -->
+            <dt><a href="inquiry.jsp">お問い合わせ</a></dt>
           </dl>
       </div>
       </section>

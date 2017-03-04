@@ -1,7 +1,6 @@
 package jp.ac.hal.hew;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +23,8 @@ import jp.ac.hal.hew.entity.ProductImages;
 /**
  * Servlet implementation class productDtail
  */
-@WebServlet("/productDtail")
-public class productDtail extends HttpServlet {
+@WebServlet("/ProductDtail")
+public class ProductDtail extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)

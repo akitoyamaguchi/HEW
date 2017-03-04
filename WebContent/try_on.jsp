@@ -1,5 +1,9 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%
+	String id = request.getParameter("id");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -121,7 +125,7 @@
 
   <!-- 戻るボタン -->
     <section class="return_btn_wrapper">
-      <p class="return_btn"><a href="#"><img src="btn/modoru.png" alt="戻るボタン" /></a></p>
+      <p class="return_btn"><a href="productDtail?id=<%= id %>"><img src="btn/modoru.png" alt="戻るボタン" /></a></p>
     </section>
 
   </article>
