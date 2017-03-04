@@ -3,10 +3,8 @@
 <%@ page import="jp.ac.hal.hew.entity.UserAddress" %>
 <%@ page import="jp.ac.hal.hew.entity.Product" %>
 <%
-	UserAddress ua = (UserAddress)request.getAttribute("userAddress");
-	Product p = (Product)request.getAttribute("product");
-	session.setAttribute("userAddress", ua);
-	session.setAttribute("product", p);
+	UserAddress ua = (UserAddress)session.getAttribute("userAddress");
+	Product p = (Product)session.getAttribute("product");
 %>
 <!DOCTYPE html>
 <html>
@@ -143,13 +141,13 @@
                 <div class="shipping_time_select_wrapper">
                   <label for="shipping_time_select">時間指定</label>
                     <select name="shipping_time_select" class="shipping_time_select">
-                      <option value="8~10" selected>08:00~10:00</option>
-                      <option value="10~12">10:00~12:00</option>
-                      <option value="12~14">12:00~14:00</option>
-                      <option value="14~16">14:00~16:00</option>
-                      <option value="16~18">16:00~18:00</option>
-                      <option value="18~20">18:00~20:00</option>
-                      <option value="20~21">20:00~21:00</option>
+                      <option value="8-10" selected>08:00~10:00</option>
+                      <option value="10-12">10:00~12:00</option>
+                      <option value="12-14">12:00~14:00</option>
+                      <option value="14-16">14:00~16:00</option>
+                      <option value="16-18">16:00~18:00</option>
+                      <option value="18-20">18:00~20:00</option>
+                      <option value="20-21">20:00~21:00</option>
                     </select>
                 </div>
           </div>

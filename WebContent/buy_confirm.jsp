@@ -1,5 +1,22 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="jp.ac.hal.hew.dao.UserAddressDAO" %>
+<%@ page import="jp.ac.hal.hew.entity.UserAddress" %>
+<%@ page import="jp.ac.hal.hew.dao.ProductDAO" %>
+<%@ page import="jp.ac.hal.hew.entity.Product" %>
+
+<%
+		int delId = Integer.valueOf(session.getAttribute("delId").toString() );
+		String mail = (String)session.getAttribute("mail");
+		int pId = Integer.valueOf(session.getAttribute("productId").toString() );
+		
+		String[] dispMethod = (String[])session.getAttribute("dispMethodDetails");
+		
+		ProductDAO pdao = new ProductDAO();
+		Product p = pdao.seletById(pId);
+		UserAddressDAO uadao = new UserAddressDAO();
+		UserAddress ua = uadao.seletById(delId, mail);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,37 +46,37 @@
         <dl>
           <dt>お届け先住所</dt>
             <dd>
-              氏名 HAL太郎
+              氏名 <%= ua.getName() %>
             </dd>
         </dl>
         <dl>
           <dt></dt>
             <dd>
-              フリガナ ハルタロウ
+              フリガナ <%= ua.getKana() %>
             </dd>
         </dl>
         <dl>
           <dt></dt>
             <dd>
-              郵便番号 1600023
+              郵便番号 <%= ua.getZipcode() %>
             </dd>
         </dl>
         <dl>
           <dt></dt>
             <dd>
-              住所 東京都新宿区西新宿1-7-3
+              住所 <%= ua.getAddress() %>
             </dd>
         </dl>
         <dl>
           <dt></dt>
             <dd>
-              電話番号 0333441010
+              電話番号 <%= ua.getPhoneNum() %>
             </dd>
         </dl>
         <dl>
           <dt></dt>
             <dd>
-              メールアドレス nyugaku@Tokyo.hal.ac.jp
+              メールアドレス <%= mail %>
             </dd>
         </dl>
         <dl>
@@ -68,18 +85,29 @@
               代金引換
             </dd>
         </dl>
-        <dl>
-          <dt><img src="img/a.png" /></dt>
-            <dd>
-              <p>商品名　カジュアルメガネ</p>
-              <p>価格　2,000円</p>
-              <p>数量　2個</p>
-            </dd>
-        </dl>
+        <%
+        String tmp = "<dl><dt>";
+        tmp += "<img src='" + p.getMainImage() + "'/>";
+        tmp += "</dt><dd>";
+        tmp += "<p>商品名　" + p.getName() + "</p>";
+  			tmp += "<p>価格　" + p.getPrice() + "円</p>";
+  			tmp += "<p>数量　1個</p>";
+  			tmp += "</dd></dl>";
+  			out.print(tmp);
+        %>
         <dl>
           <dt>配送方法</dt>
             <dd>
-              通常配送
+             	<%
+             		if(dispMethod.length == 1) {
+             			out.println("通常配送");
+             		} else {
+             			%>
+             			配送日指定<br>
+             			<%= dispMethod[0] %>月<%= dispMethod[1] %>日<%= dispMethod[2] %>時ごろ到着予定
+             			<%
+             		}
+             	%>
             </dd>
         </dl>
       </div>
@@ -88,7 +116,7 @@
 
     <div class="btn_kanryou">
           <button class="modoru" onclick="location.href='buy_change.jsp'"><img src="btn/modoru.png" /></button>
-          <button class="kanryou" onclick="location.href='#'"><img src="btn/kanryou.png" /></button>
+          <button class="kanryou" onclick="location.href='buy_complete.jsp'"><img src="btn/kanryou.png" /></button>
     </div>
 
   </article>

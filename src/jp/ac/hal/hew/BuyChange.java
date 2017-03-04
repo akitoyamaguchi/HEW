@@ -38,8 +38,8 @@ public class BuyChange extends HttpServlet {
 				ProductDAO pdao = new ProductDAO();
 				ua = uadao.seletById(delId, (String)session.getAttribute("mail") );
 				Product product = pdao.seletById( (int)session.getAttribute("productId") );
-				request.setAttribute("userAddress", ua);
-				request.setAttribute("product", product);
+				session.setAttribute("userAddress", ua);
+				session.setAttribute("product", product);
 			}catch(ClassNotFoundException e) {
 				e.printStackTrace();
 			}
