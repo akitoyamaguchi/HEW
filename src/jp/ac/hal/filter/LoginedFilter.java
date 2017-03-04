@@ -44,9 +44,9 @@ public class LoginedFilter implements Filter {
 		if(session == null) {
 			hsr.sendRedirect("index.jsp");
 		} else if(null == session.getAttribute("isLogin") ) {
-			hsr.sendRedirect("index.jsp");
+			hsr.sendRedirect("/HEW/index.jsp");
 		} else if(!Boolean.valueOf(session.getAttribute("isLogin").toString() ) ) {
-			hsr.sendRedirect("index.jsp");
+			hsr.sendRedirect("/HEW/index.jsp");
 		}
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
