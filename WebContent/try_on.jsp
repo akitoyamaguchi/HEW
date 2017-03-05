@@ -15,8 +15,17 @@
 <link href="css/header_footer.css" rel="stylesheet" type="text/css">
 
 <style type="text/css">
-
+  /*three.jsで生成されたcanvas要素に対して左右反転をかける*/
+  canvas {
+    transform: scaleX(-1);
+  }
 </style>
+
+<script src="js/lib/three.min.js"></script>
+<script src="js/lib/MTLLoader.js"></script>
+<script src="js/lib/OBJLoader.js"></script>
+
+
 </head>
 <body>
   <!-- 全体ラッパー -->
@@ -30,8 +39,9 @@
     <!-- 左カラム -->
 
       <section class="left_column_wrapper">
-        <div class="try_on_content">
-          <h2>試着画面</h2>
+        <div class="try_on_content" id="output">
+          	<video style="display:none;" id="inputVideo" autoplay></video>
+      			<canvas style="display:none;" id="canvas"></canvas>
         </div>
       </section>
     <!-- 右カラム -->
@@ -125,7 +135,7 @@
 
   <!-- 戻るボタン -->
     <section class="return_btn_wrapper">
-      <p class="return_btn"><a href="productDtail?id=<%= id %>"><img src="btn/modoru.png" alt="戻るボタン" /></a></p>
+      <p class="return_btn"><a href="ProductDtail?id=<%= id %>"><img src="btn/modoru.png" alt="戻るボタン" /></a></p>
     </section>
 
   </article>
@@ -172,6 +182,6 @@
       document.getElementById('tab4').style.borderColor = '#f96';
 		}
   </script>
-
+<script src="js/glasses.js"></script>
 </body>
 </html>
