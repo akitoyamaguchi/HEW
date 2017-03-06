@@ -34,13 +34,13 @@
 
 .try_on_content{
 	position: relative;
-	width: 50vw;
+	width: 800px;
 	max-width: 800px;
 	min-width: 450px;
 	height: 605px;
 	min-height: 562px;
 	margin-top: 45px;
-	background: #f3f;
+	background: #000;
 	/*border: solid 1px;*/
 	/*margin: 0 0 40px 0;*/
 }
@@ -67,7 +67,7 @@ canvas{
 	width: 640px;
 	height: 605px;
 	margin: 0 10%;
-	
+
 }
 
 /*右カラム*/
@@ -85,6 +85,7 @@ canvas{
 	justify-content: flex-start;
 }
 .tab_wrapper{
+	width: 280px;
 	min-width: 280px;
 	display: flex;
 	flex-direction: row;
@@ -92,12 +93,13 @@ canvas{
 	justify-content: flex-start;
 }
 .tab_wrapper li{
-	width: auto;
-	max-width: 65px;
+	width: 71px;
+	max-width: 70px;
 	min-width: 60px;
 	height: 40px;
 	margin: 45px 0 0 0;
 	padding: 10px;
+	font-size: 14px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
