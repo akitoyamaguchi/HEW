@@ -1,9 +1,9 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="jp.ac.hal.hew.Product" %>
-<%@ page import="jp.ac.hal.hew.Category" %>
-<%@ page import="jp.ac.hal.hew.Makers" %>
-<%@ page import="jp.ac.hal.hew.ProductImages" %>
+<%@ page import="jp.ac.hal.hew.entity.Product" %>
+<%@ page import="jp.ac.hal.hew.entity.Category" %>
+<%@ page import="jp.ac.hal.hew.entity.Makers" %>
+<%@ page import="jp.ac.hal.hew.entity.ProductImages" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
 
@@ -63,7 +63,7 @@
 
         <button class="cart_add" onclick="location.href='cart.jsp'">カートに入れる</button>
 
-        <button class="try_on" onclick="location.href='try_on.jsp'"><img src="btn/sityaku.png"/></button>
+        <button class="try_on" onclick="location.href='try_on.jsp?id=<%= detail.getId() %>'"><img src="btn/sityaku.png"/></button>
 
         <button class="buy" onclick="location.href='Method?id=<%= detail.getId() %>'">購入</button>
 

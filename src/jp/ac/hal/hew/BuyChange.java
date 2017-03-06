@@ -10,6 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import jp.ac.hal.hew.dao.ProductDAO;
+import jp.ac.hal.hew.dao.UserAddressDAO;
+import jp.ac.hal.hew.entity.Product;
+import jp.ac.hal.hew.entity.UserAddress;
+
 /**
  * Servlet implementation class BuyChange
  */
@@ -22,9 +27,9 @@ public class BuyChange extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int delId = Integer.valueOf(request.getParameter("delId") );
 		UserAddress ua;
 		HttpSession session = request.getSession(false);
+		int delId = (int)session.getAttribute("delId");
 		String URL;
 		
 		if(session != null && session.getAttribute("isLogin") != null) {
@@ -33,8 +38,8 @@ public class BuyChange extends HttpServlet {
 				ProductDAO pdao = new ProductDAO();
 				ua = uadao.seletById(delId, (String)session.getAttribute("mail") );
 				Product product = pdao.seletById( (int)session.getAttribute("productId") );
-				request.setAttribute("userAddress", ua);
-				request.setAttribute("product", product);
+				session.setAttribute("userAddress", ua);
+				session.setAttribute("product", product);
 			}catch(ClassNotFoundException e) {
 				e.printStackTrace();
 			}

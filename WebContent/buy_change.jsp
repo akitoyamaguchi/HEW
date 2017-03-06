@@ -1,12 +1,10 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="jp.ac.hal.hew.UserAddress" %>
-<%@ page import="jp.ac.hal.hew.Product" %>
+<%@ page import="jp.ac.hal.hew.entity.UserAddress" %>
+<%@ page import="jp.ac.hal.hew.entity.Product" %>
 <%
-	UserAddress ua = (UserAddress)request.getAttribute("userAddress");
-	Product p = (Product)request.getAttribute("product");
-	session.setAttribute("userAddress", ua);
-	session.setAttribute("product", p);
+	UserAddress ua = (UserAddress)session.getAttribute("userAddress");
+	Product p = (Product)session.getAttribute("product");
 %>
 <!DOCTYPE html>
 <html>
@@ -75,13 +73,13 @@
       <div class="change_payment">
         <h2>支払い方法</h2>
         <label>代金引換<br /></label><p>(国内配送のみ。代引き手数料がかかります。)</p>
-        <button onclick="location.href='payment.jsp?delId=<%= ua.getDeliveryAddressNum() %>'">変更</button>
+        <button onclick="location.href='payment.jsp?delId=<%= ua.getDeliveryAddressNumber() %>'">変更</button>
       </div>
     </section>
 
     <section class="change_shipping_wrapper">
       <div class="bottom_contents_wrapper">
-        <form class="select_shipping_form" action="#" method="post">
+        <form class="select_shipping_form" action="SelectShippingForm" method="post">
           <div class="contents">
             <p><img src=<%= p.getMainImage() %> /></p>
             <p class="contents_info"><%= p.getName() %><br><%= p.getPrice() %>
@@ -143,13 +141,13 @@
                 <div class="shipping_time_select_wrapper">
                   <label for="shipping_time_select">時間指定</label>
                     <select name="shipping_time_select" class="shipping_time_select">
-                      <option value="8~10" selected>08:00~10:00</option>
-                      <option value="10~12">10:00~12:00</option>
-                      <option value="12~14">12:00~14:00</option>
-                      <option value="14~16">14:00~16:00</option>
-                      <option value="16~18">16:00~18:00</option>
-                      <option value="18~20">18:00~20:00</option>
-                      <option value="20~21">20:00~21:00</option>
+                      <option value="8-10" selected>08:00~10:00</option>
+                      <option value="10-12">10:00~12:00</option>
+                      <option value="12-14">12:00~14:00</option>
+                      <option value="14-16">14:00~16:00</option>
+                      <option value="16-18">16:00~18:00</option>
+                      <option value="18-20">18:00~20:00</option>
+                      <option value="20-21">20:00~21:00</option>
                     </select>
                 </div>
           </div>

@@ -31,7 +31,9 @@
 	justify-content: flex-end;
 	align-items: center;
 }
+
 .try_on_content{
+	position: relative;
 	width: 50vw;
 	max-width: 800px;
 	min-width: 450px;
@@ -39,13 +41,33 @@
 	min-height: 562px;
 	margin-top: 45px;
 	background: #f3f;
-	border: solid 1px;
+	/*border: solid 1px;*/
 	/*margin: 0 0 40px 0;*/
 }
-.try_on_content h2{
+/* .try_on_content h2{
 	text-align: center;
 	margin-top: 270px;
 	font-size: 32px;
+} */
+
+video{
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+
+canvas{
+	z-index: 1;
+	position: absolute;
+	width: 640px;
+	height: 605px;
+	margin: 0 10%;
+	
 }
 
 /*右カラム*/

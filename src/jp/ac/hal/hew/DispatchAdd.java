@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import jp.ac.hal.hew.dao.UserAddressDAO;
+import jp.ac.hal.hew.entity.UserAddress;
+
 /**
  * Servlet implementation class DispatchAdd
  */
@@ -48,6 +51,7 @@ public class DispatchAdd extends HttpServlet {
 			}catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
+			// 確認画面はスキップ
 			response.sendRedirect("/HEW/dispatch_add_complete.jsp");
 		}
 	}

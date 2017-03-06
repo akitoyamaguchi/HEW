@@ -28,27 +28,27 @@
       <section class="item_box flex_row acount_setting">
         <p>アカウント設定</p>
         <div class="flex_column">
-          <a href="#">メールアドレス変更</a>
-          <a href="#">パスワード変更</a>
-          <a href="#">退会</a>
+          <a href="member_address_change.jsp">メールアドレス変更</a>
+          <a href="member_password_change.jsp">パスワード変更</a>
+          <a href="member_withdrawal.jsp">退会</a>
         </div>
       </section>
       <section class="item_box flex_row bought_history">
         <p>購入履歴</p>
         <div class="flex_column">
-          <a href="#">購入履歴</a>
+          <a href="buy_log.jsp">購入履歴</a>
         </div>
       </section>
       <section class="item_box flex_row wish_list">
         <p>ほしいものリスト</p>
         <div class="flex_column">
-          <a href="#">ほしいものリスト</a>
+          <a href="wish_list.jsp">ほしいものリスト</a>
         </div>
       </section>
       <section class="item_box flex_row general_shipment">
         <p>発送先関連</p>
         <div class="flex_column">
-          <a href="member_buy">発送先登録・変更・削除</a>
+          <a href="member_buy.jsp">発送先登録・変更・削除</a>
         </div>
       </section>
       </div>

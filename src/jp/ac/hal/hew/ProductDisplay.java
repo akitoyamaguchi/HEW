@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import jp.ac.hal.hew.dao.ProductDAO;
+import jp.ac.hal.hew.entity.Product;
+
 /**
  * Servlet implementation class ProductDisplay
  */

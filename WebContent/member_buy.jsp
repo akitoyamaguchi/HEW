@@ -1,7 +1,7 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="jp.ac.hal.hew.UserAddressDAO" %>
-<%@ page import="jp.ac.hal.hew.UserAddress" %>
+<%@ page import="jp.ac.hal.hew.dao.UserAddressDAO" %>
+<%@ page import="jp.ac.hal.hew.entity.UserAddress" %>
 <%@ page import="java.util.ArrayList" %>
 <%
 	UserAddressDAO uadao = new UserAddressDAO();
@@ -33,7 +33,13 @@
     <h1 class="member_buy_title">会員購入情報選択</h1>
     <section class="new_add_wrapper">
       <h2 class="max_add">発送先の最大登録数は5件です。</h2>
-      <button class="new_shipping" onclick="location.href='dispatch_add.jsp'">発送先の新規登録</button>
+      <%
+      	if(ua.size() < 5) {
+      		%>
+      		<button class="new_shipping" onclick="location.href='dispatch_add.jsp'">発送先の新規登録</button>
+      		<%
+      	} else {}
+      %>
     </section>
     <%
     	for(UserAddress u: ua) {
@@ -46,8 +52,8 @@
     			out.println("</div>");
     			out.println("<div class='member_shipping_wrapper'>");
     			out.println("<div class='member_shipping_top'>");
-    			out.println("<p><span>郵便番号</span><br />" + u.getZipcode() + "</p>");
-    			out.println("<p><span>住所</span><br />" + u.getAddress() + "</p>");
+    			out.println("<p><span>郵便番号</span><br>" + u.getZipcode() + "</p>");
+    			out.println("<p><span>住所</span><br>" + u.getAddress() + "</p>");
     			out.println("</div>");
     			out.println("<div class='member_shipping_middle'>");
     			out.println("<p><span>フリガナ</span>" + u.getKana() + "<br><span>氏名</span>" + u.getName() + "</p>");
@@ -55,7 +61,7 @@
     			out.println("</div>");
     			out.println("</div>");
     			out.println("<div class='member_shipping_button'>");
-    			out.println("<button onclick=\"location.href=\'payment.jsp?delId=" + u.getDeliveryAddressNum() + "\'\" class='use_shipping'>この住所を使う</button>");
+    			out.println("<button onclick=\"location.href=\'payment.jsp?delId=" + u.getDeliveryAddressNumber() + "\'\" class='use_shipping'>この住所を使う</button>");
     			out.println("</div>");
     			out.println("</section>");
     	}
